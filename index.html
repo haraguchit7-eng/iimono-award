@@ -5,15 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>iimono award｜いいモノの価値を、誠実に見極め、社会へひらく。</title>
   <meta name="description" content="iimono awardは、日本の生活•文化の向上と規範となる価値観を創り、頑張っている生産者を応援する認証機関です。" />
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
-  
+
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Award Index Table CSS -->
+  <style>
+    .award-index-block {
+      margin-top: 2rem;
+    }
+
+    .award-index-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .award-index-mark {
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #000;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .award-index-header h3 {
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.25;
+      font-weight: 800;
+      color: #000;
+      margin-bottom: 0.4rem;
+    }
+
+    .award-index-header p {
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.25;
+      font-weight: 800;
+      color: #000;
+    }
+
+    .award-index-table-wrap {
+      overflow-x: auto;
+      background: #fff;
+      border: 1px solid #cfcfcf;
+    }
+
+    .award-index-table {
+      width: 100%;
+      min-width: 1120px;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: #fff;
+    }
+
+    .award-index-table th,
+    .award-index-table td {
+      border: 1px solid #cfcfcf;
+      padding: 12px;
+      vertical-align: middle;
+      font-family: "Noto Sans JP", sans-serif;
+      color: #111;
+    }
+
+    .award-index-table .label-cell {
+      width: 140px;
+      background: #f6f6f6;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .award-index-table .period-cell,
+    .award-index-table .division-cell {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .award-index-table .product-name-cell {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .award-index-table .image-cell {
+      padding: 0;
+    }
+
+    .award-index-table .image-cell img {
+      display: block;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .award-index-table .image-cell-highlight {
+      outline: 4px solid #2546ff;
+      outline-offset: -4px;
+    }
+
+    .detail-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border: 1px solid #1a2e44;
+      color: #1a2e44;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .detail-link-btn:hover {
+      background: #1a2e44;
+      color: #fff;
+    }
+
+    @media (max-width: 640px) {
+      .award-index-mark {
+        font-size: 1.6rem;
+      }
+
+      .award-index-header h3 {
+        font-size: 2rem;
+      }
+
+      .award-index-header p {
+        font-size: 1.7rem;
+      }
+
+      .award-index-table .image-cell img {
+        height: 220px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -167,7 +300,6 @@
           </div>
         </div>
 
-        <!-- 市場課題 -->
         <div class="market-issue reveal">
           <div class="market-issue-header">
             <span class="section-label">Background</span>
@@ -220,7 +352,6 @@
           </p>
         </div>
 
-        <!-- 評価基準 -->
         <div class="cert-section reveal">
           <h3 class="cert-section-title">
             <span class="cert-num">01</span>評価基準
@@ -256,7 +387,6 @@
           <p class="criteria-note">※評価項目の詳細は、カテゴリーごとの審査要項に基づき公開します。</p>
         </div>
 
-        <!-- 評価プロセス -->
         <div class="cert-section reveal">
           <h3 class="cert-section-title">
             <span class="cert-num">02</span>評価プロセス
@@ -313,7 +443,6 @@
           </div>
         </div>
 
-        <!-- 利益相反ポリシー -->
         <div class="cert-section reveal">
           <h3 class="cert-section-title">
             <span class="cert-num">03</span>利益相反ポリシー
@@ -364,160 +493,72 @@
           このページでは、iimono awardが認証した商品・サービス・企業をご覧いただけます。生活者にとっては信頼できる選択肢を見つけるための入口として。事業者にとっては、社会にどう評価されているかを知るための参照情報として設計しています。
         </p>
 
-        <!-- フィルター -->
-        <div class="directory-filter reveal">
-          <div class="filter-group">
-            <label>カテゴリー</label>
-            <select id="filter-category">
-              <option value="">すべて</option>
-              <option value="food">食品・飲料</option>
-              <option value="craft">工芸・手仕事</option>
-              <option value="daily">日用品</option>
-              <option value="service">サービス</option>
-              <option value="local">地域産品</option>
-            </select>
+        <div class="award-index-block reveal">
+          <div class="award-index-header">
+            <div class="award-index-mark">● INDEX ●</div>
+            <h3>2026年上半期 iimono award商品</h3>
+            <p>◆ ケーキ部門</p>
           </div>
-          <div class="filter-group">
-            <label>地域</label>
-            <select id="filter-region">
-              <option value="">すべての地域</option>
-              <option value="hokkaido">北海道・東北</option>
-              <option value="kanto">関東</option>
-              <option value="chubu">中部・北陸</option>
-              <option value="kansai">近畿</option>
-              <option value="chugoku">中国・四国</option>
-              <option value="kyushu">九州・沖縄</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <label>年度</label>
-            <select id="filter-year">
-              <option value="">すべての年度</option>
-              <option value="2026">2026年度</option>
-              <option value="2025">2025年度</option>
-              <option value="2024">2024年度</option>
-            </select>
-          </div>
-          <div class="filter-search">
-            <input type="text" id="filter-keyword" placeholder="キーワードで検索..." />
-            <i class="fas fa-search"></i>
+
+          <div class="award-index-table-wrap">
+            <table class="award-index-table">
+              <tbody>
+                <tr>
+                  <th class="label-cell">期間</th>
+                  <td colspan="3" class="period-cell">2026年上半期 iimono award商品</td>
+                </tr>
+                <tr>
+                  <th class="label-cell">部門名</th>
+                  <td colspan="3" class="division-cell">◆ ケーキ部門</td>
+                </tr>
+                <tr>
+                  <th class="label-cell">商品名</th>
+                  <td class="product-name-cell">モンブラン</td>
+                  <td class="product-name-cell">旬の果物のタルト</td>
+                  <td class="product-name-cell">3種のベリーのオペラ</td>
+                </tr>
+                <tr>
+                  <th class="label-cell">画像</th>
+                  <td class="image-cell">
+                    <img src="images/montblanc.jpg" alt="モンブラン">
+                  </td>
+                  <td class="image-cell">
+                    <img src="images/fruit-tart.jpg" alt="旬の果物のタルト">
+                  </td>
+                  <td class="image-cell image-cell-highlight">
+                    <img src="images/opera.jpg" alt="3種のベリーのオペラ">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="label-cell">価格</th>
+                  <td>680円（1個）</td>
+                  <td>790円（1個）</td>
+                  <td>500円（1個）</td>
+                </tr>
+                <tr>
+                  <th class="label-cell">販売元名</th>
+                  <td>いいモノ cafe</td>
+                  <td>iimono洋菓子店</td>
+                  <td>パティスリーいいモノ</td>
+                </tr>
+                <tr>
+                  <th class="label-cell">詳細</th>
+                  <td>
+                    <a class="detail-link-btn" href="awards/2026-cake-montblanc.html">詳細を見る</a>
+                  </td>
+                  <td>
+                    <a class="detail-link-btn" href="awards/2026-cake-fruit-tart.html">詳細を見る</a>
+                  </td>
+                  <td>
+                    <a class="detail-link-btn" href="awards/2026-cake-opera.html">詳細を見る</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
-        <!-- 認証カードリスト（サンプル） -->
-        <div class="directory-grid" id="directory-grid">
-
-          <div class="cert-card reveal" data-category="food" data-region="kansai" data-year="2026">
-            <div class="cert-card-badge">認証済</div>
-            <div class="cert-card-mark">
-              <span class="mark-icon"><i class="fas fa-award"></i></span>
-            </div>
-            <div class="cert-card-body">
-              <span class="cert-card-category">食品・飲料</span>
-              <h3 class="cert-card-name">株式会社 山田醸造</h3>
-              <p class="cert-card-product">伝統醸造みそ「里の蔵」</p>
-              <p class="cert-card-region"><i class="fas fa-map-marker-alt"></i> 大阪府</p>
-              <p class="cert-card-desc">100年以上継承される麹文化と現代の品質管理を融合。原材料の開示と製造背景の透明性が高く評価されました。</p>
-            </div>
-            <div class="cert-card-footer">
-              <span class="cert-year">2026年度認証</span>
-              <a href="#" class="cert-card-link">詳細を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="cert-card reveal reveal-delay-1" data-category="craft" data-region="chubu" data-year="2026">
-            <div class="cert-card-badge">認証済</div>
-            <div class="cert-card-mark">
-              <span class="mark-icon"><i class="fas fa-award"></i></span>
-            </div>
-            <div class="cert-card-body">
-              <span class="cert-card-category">工芸・手仕事</span>
-              <h3 class="cert-card-name">鈴木陶芸工房</h3>
-              <p class="cert-card-product">美濃焼「晴陶シリーズ」</p>
-              <p class="cert-card-region"><i class="fas fa-map-marker-alt"></i> 岐阜県</p>
-              <p class="cert-card-desc">三代にわたる技術継承と、現代の生活様式に寄り添う器づくりが評価されました。品質の一貫性と情報発信の誠実さが認証の根拠です。</p>
-            </div>
-            <div class="cert-card-footer">
-              <span class="cert-year">2026年度認証</span>
-              <a href="#" class="cert-card-link">詳細を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="cert-card reveal reveal-delay-2" data-category="local" data-region="hokkaido" data-year="2025">
-            <div class="cert-card-badge">認証済</div>
-            <div class="cert-card-mark">
-              <span class="mark-icon"><i class="fas fa-award"></i></span>
-            </div>
-            <div class="cert-card-body">
-              <span class="cert-card-category">地域産品</span>
-              <h3 class="cert-card-name">北の大地ファーム</h3>
-              <p class="cert-card-product">無農薬野菜「大地便」定期便</p>
-              <p class="cert-card-region"><i class="fas fa-map-marker-alt"></i> 北海道</p>
-              <p class="cert-card-desc">農薬・肥料の使用履歴を完全開示し、生産者の顔が見えるサプライチェーン設計が高く評価されました。</p>
-            </div>
-            <div class="cert-card-footer">
-              <span class="cert-year">2025年度認証</span>
-              <a href="#" class="cert-card-link">詳細を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="cert-card reveal" data-category="daily" data-region="kanto" data-year="2025">
-            <div class="cert-card-badge">認証済</div>
-            <div class="cert-card-mark">
-              <span class="mark-icon"><i class="fas fa-award"></i></span>
-            </div>
-            <div class="cert-card-body">
-              <span class="cert-card-category">日用品</span>
-              <h3 class="cert-card-name">株式会社 暮らし研究所</h3>
-              <p class="cert-card-product">天然由来洗剤「まほろば」シリーズ</p>
-              <p class="cert-card-region"><i class="fas fa-map-marker-alt"></i> 東京都</p>
-              <p class="cert-card-desc">成分の完全開示と環境負荷の定量的な説明が評価されました。消費者からのフィードバックを製品改善に反映する継続的な姿勢も認証理由の一つです。</p>
-            </div>
-            <div class="cert-card-footer">
-              <span class="cert-year">2025年度認証</span>
-              <a href="#" class="cert-card-link">詳細を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="cert-card reveal reveal-delay-1" data-category="service" data-region="kansai" data-year="2026">
-            <div class="cert-card-badge">認証済</div>
-            <div class="cert-card-mark">
-              <span class="mark-icon"><i class="fas fa-award"></i></span>
-            </div>
-            <div class="cert-card-body">
-              <span class="cert-card-category">サービス</span>
-              <h3 class="cert-card-name">合同会社 てまひかリペア</h3>
-              <p class="cert-card-product">衣類修繕・リペアサービス</p>
-              <p class="cert-card-region"><i class="fas fa-map-marker-alt"></i> 京都府</p>
-              <p class="cert-card-desc">サービス内容・価格根拠・職人背景の開示が適切で、「長く使う」という思想と実務が一致していると評価されました。</p>
-            </div>
-            <div class="cert-card-footer">
-              <span class="cert-year">2026年度認証</span>
-              <a href="#" class="cert-card-link">詳細を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="cert-card reveal reveal-delay-2" data-category="food" data-region="kyushu" data-year="2024">
-            <div class="cert-card-badge">認証済</div>
-            <div class="cert-card-mark">
-              <span class="mark-icon"><i class="fas fa-award"></i></span>
-            </div>
-            <div class="cert-card-body">
-              <span class="cert-card-category">食品・飲料</span>
-              <h3 class="cert-card-name">壱岐島茶葉農家連合</h3>
-              <p class="cert-card-product">離島産和紅茶「島の夕靄」</p>
-              <p class="cert-card-region"><i class="fas fa-map-marker-alt"></i> 長崎県</p>
-              <p class="cert-card-desc">土壌・気候・製法の背景が丁寧に文書化されており、産地と味の結びつきを誠実に伝える姿勢が評価の根拠です。</p>
-            </div>
-            <div class="cert-card-footer">
-              <span class="cert-year">2024年度認証</span>
-              <a href="#" class="cert-card-link">詳細を見る <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="directory-more reveal">
+        <div class="directory-more reveal" style="margin-top: 2rem;">
           <a href="#" class="btn btn-outline">すべての認証を見る</a>
         </div>
       </div>
@@ -644,7 +685,6 @@
         </p>
 
         <div class="governance-grid">
-          <!-- 委員会 -->
           <div class="governance-block reveal">
             <h3><i class="fas fa-users"></i> 評価委員会</h3>
             <p>評価委員会は、各分野の知見を持つ有識者によって構成されます。品質、ブランド、流通、地域性、生活者視点など、多面的な観点から審議を行います。</p>
@@ -673,7 +713,6 @@
             </div>
           </div>
 
-          <!-- 運営体制 -->
           <div class="governance-block reveal reveal-delay-1">
             <h3><i class="fas fa-sitemap"></i> 運営体制</h3>
             <p>iimono awardでは、認証制度の公正な運営のため、役割ごとに体制を分けています。</p>
@@ -695,7 +734,6 @@
             </div>
           </div>
 
-          <!-- 透明性方針 -->
           <div class="governance-block governance-block-full reveal">
             <h3><i class="fas fa-eye"></i> 透明性方針</h3>
             <p class="policy-headline">見えない運営をしない。</p>
