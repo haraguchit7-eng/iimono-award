@@ -1,20 +1,479 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>旬の果物のタルト | iimono award</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      background: #faf9f7;
+    }
+
+    .product-detail-page {
+      padding-top: 110px;
+      padding-bottom: 80px;
+    }
+
+    .product-detail-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 28px;
+      color: #1a2e44;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .hero-card {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #e0dbd0;
+      padding: 40px;
+      box-shadow: 0 4px 24px rgba(26,46,68,0.08);
+      margin-bottom: 40px;
+    }
+
+    .hero-image {
+      width: 100%;
+      border: 1px solid #e0dbd0;
+      background: linear-gradient(135deg, #f7f3ed, #ece6dc);
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: #8b7355;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      color: #8b7355;
+      margin-bottom: 14px;
+    }
+
+    .product-title {
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.35;
+      color: #1a2e44;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .product-sub {
+      font-size: 1rem;
+      color: #6b6b6b;
+      line-height: 1.9;
+      margin-bottom: 28px;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .meta-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eee6da;
+      font-size: 0.96rem;
+    }
+
+    .meta-label {
+      color: #8b7355;
+      font-weight: 700;
+    }
+
+    .meta-value {
+      color: #2c2c2c;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 24px;
+      border: 1px solid #1a2e44;
+      text-decoration: none;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn.primary {
+      background: #1a2e44;
+      color: #fff;
+    }
+
+    .cta-btn.primary:hover {
+      background: #0f1e2e;
+      border-color: #0f1e2e;
+    }
+
+    .cta-btn.secondary {
+      color: #1a2e44;
+      background: transparent;
+    }
+
+    .cta-btn.secondary:hover {
+      background: #1a2e44;
+      color: #fff;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .content-main {
+      display: grid;
+      gap: 28px;
+    }
+
+    .content-card {
+      background: #fff;
+      border: 1px solid #e0dbd0;
+      padding: 32px;
+      box-shadow: 0 2px 10px rgba(26,46,68,0.04);
+    }
+
+    .section-title-local {
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.45rem;
+      color: #1a2e44;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .lead-copy {
+      font-size: 1.06rem;
+      line-height: 2;
+      color: #2c2c2c;
+      margin-bottom: 16px;
+    }
+
+    .normal-copy {
+      font-size: 0.97rem;
+      line-height: 2;
+      color: #555;
+    }
+
+    .reason-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .reason-item {
+      border-left: 3px solid #c8a96e;
+      background: #fcfaf6;
+      padding: 14px 16px;
+    }
+
+    .reason-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #1a2e44;
+      font-size: 0.98rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .gallery-box {
+      min-height: 180px;
+      border: 1px solid #e0dbd0;
+      background: linear-gradient(135deg, #f7f3ed, #ece6dc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8b7355;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+    }
+
+    .sidebar {
+      display: grid;
+      gap: 24px;
+      position: sticky;
+      top: 96px;
+    }
+
+    .sidebar-card {
+      background: #fff;
+      border: 1px solid #e0dbd0;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(26,46,68,0.04);
+    }
+
+    .sidebar-title {
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.08rem;
+      color: #1a2e44;
+      margin-bottom: 14px;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 12px;
+      font-size: 0.94rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .price-big {
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.8rem;
+      color: #1a2e44;
+      margin-bottom: 6px;
+    }
+
+    .small-note {
+      font-size: 0.82rem;
+      color: #888;
+      line-height: 1.7;
+    }
+
+    .maker-block {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-top: 10px;
+    }
+
+    .maker-photo {
+      width: 100%;
+      min-height: 140px;
+      border: 1px solid #e0dbd0;
+      background: linear-gradient(135deg, #f7f3ed, #ece6dc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8b7355;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .maker-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a2e44;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-card {
+        grid-template-columns: 1fr;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .product-detail-page {
+        padding-top: 90px;
+      }
+
+      .hero-card,
+      .content-card,
+      .sidebar-card {
+        padding: 22px;
+      }
+
+      .hero-image {
+        min-height: 320px;
+        font-size: 1.5rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .maker-block {
+        grid-template-columns: 1fr;
+      }
+
+      .meta-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main class="container" style="padding:120px 20px 80px;">
-    <p><a href="../index.html#directory">← 認証一覧へ戻る</a></p>
-    <h1 style="margin:20px 0 12px;">旬の果物のタルト</h1>
-    <p>2026年上半期 / ケーキ部門 / 790円（1個）</p>
-    <p style="margin-top:24px;">販売元：iimono洋菓子店</p>
-    <p style="margin-top:24px; line-height:1.9;">
-      果物の華やかさ、季節感、贈答性の高さが評価された商品です。
-    </p>
+  <main class="product-detail-page">
+    <div class="product-detail-wrap">
+      <a href="../index.html#directory" class="back-link">← 認証一覧へ戻る</a>
+
+      <section class="hero-card">
+        <div class="hero-image">
+          TART IMAGE
+        </div>
+
+        <div class="hero-copy">
+          <span class="eyebrow">2026 FIRST HALF / CAKE CATEGORY</span>
+          <h1 class="product-title">旬の果物のタルト</h1>
+          <p class="product-sub">
+            季節ごとの果実の魅力を一皿に閉じ込めた、華やかで上品なタルト。
+            見た瞬間に心をつかみ、食べるほどに完成度の高さが伝わる一品です。
+          </p>
+
+          <div class="meta-list">
+            <div class="meta-item">
+              <div class="meta-label">価格</div>
+              <div class="meta-value">790円（1個）</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">販売元</div>
+              <div class="meta-value">iimono洋菓子店</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">部門</div>
+              <div class="meta-value">2026年上半期 / ケーキ部門</div>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a href="#" class="cta-btn primary">購入・店舗情報を見る</a>
+            <a href="../index.html#directory" class="cta-btn secondary">一覧へ戻る</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="content-main">
+
+          <div class="content-card">
+            <h2 class="section-title-local">この商品の魅力</h2>
+            <p class="lead-copy">
+              色とりどりの果物が美しく重なり合い、店頭でもひときわ目を引く存在感を放つタルトです。
+              華やかな見た目だけでなく、果実の瑞々しさ、軽やかなクリーム、香ばしいタルト生地の一体感まで丁寧に設計されています。
+            </p>
+            <p class="normal-copy">
+              「贈りたくなる」「手土産に選びたくなる」「自分へのご褒美にしたくなる」。
+              そんな感情を自然に生み出す完成度の高さが、この商品の大きな魅力です。
+              季節感の表現と、価格以上の満足感が両立している点も高く評価されました。
+            </p>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title-local">iimono award 認証理由</h2>
+            <div class="reason-list">
+              <div class="reason-item">
+                <strong>1. 見た目の完成度</strong>
+                果実の配置や色のバランスに優れ、第一印象の華やかさが際立っています。
+              </div>
+              <div class="reason-item">
+                <strong>2. 季節感の表現力</strong>
+                旬の果物の魅力をしっかり感じられ、商品そのものに季節の価値が宿っています。
+              </div>
+              <div class="reason-item">
+                <strong>3. 贈答性の高さ</strong>
+                手土産・差し入れ・お祝いなど、複数の利用シーンで選ばれやすい商品設計です。
+              </div>
+              <div class="reason-item">
+                <strong>4. 価格との価値バランス</strong>
+                790円という価格に対して、見た目・満足感・特別感のバランスが非常に高い一品です。
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title-local">商品ギャラリー</h2>
+            <div class="gallery-grid">
+              <div class="gallery-box">SUB IMAGE 1</div>
+              <div class="gallery-box">SUB IMAGE 2</div>
+              <div class="gallery-box">SUB IMAGE 3</div>
+              <div class="gallery-box">SUB IMAGE 4</div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title-local">作り手について</h2>
+            <div class="maker-block">
+              <div class="maker-photo">PATISSIER PHOTO</div>
+              <div>
+                <div class="maker-name">iimono洋菓子店 パティシエ</div>
+                <p class="normal-copy">
+                  果物の個性を活かした洋菓子づくりを得意とし、見た目の華やかさと食べた時の満足感の両立を大切にしている作り手です。
+                  季節ごとの素材選びにこだわり、その時期に一番魅力のある味わいをどう表現するかを重視しています。
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-title">商品情報</div>
+            <div class="price-big">790円</div>
+            <div class="mini-list">
+              <div>内容：1個</div>
+              <div>販売元：iimono洋菓子店</div>
+              <div>カテゴリ：ケーキ</div>
+              <div>認証時期：2026年上半期</div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-title">おすすめシーン</div>
+            <div class="mini-list">
+              <div>・手土産として</div>
+              <div>・来客時のおもてなしに</div>
+              <div>・自分へのご褒美に</div>
+              <div>・季節の贈り物に</div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-title">備考</div>
+            <p class="small-note">
+              価格・内容は掲載時点の情報です。最新の販売状況や在庫、取り扱い内容は販売元へご確認ください。
+            </p>
+          </div>
+        </aside>
+      </section>
+    </div>
   </main>
 </body>
 </html>
