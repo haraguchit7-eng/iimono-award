@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3種のベリーのオペラ | iimono award</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .award-detail-page {
+      padding: 120px 0 80px;
+      background: #fff;
+    }
+
+    .award-detail-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: #1a2e44;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .detail-sheet {
+      border: 1px solid #cfcfcf;
+      background: #fff;
+    }
+
+    .detail-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      border-bottom: 1px solid #cfcfcf;
+    }
+
+    .detail-row:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      background: #f7f7f7;
+      border-right: 1px solid #cfcfcf;
+      padding: 14px 16px;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .detail-content {
+      padding: 14px 16px;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .detail-title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .detail-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .main-photo {
+      width: 100%;
+      max-width: 760px;
+      display: block;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      max-width: 760px;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      display: block;
+      border: 1px solid #ddd;
+    }
+
+    .maker-block {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 20px;
+      align-items: start;
+      max-width: 760px;
+    }
+
+    .maker-photo {
+      width: 100%;
+      max-width: 180px;
+      border: 1px solid #ddd;
+      display: block;
+    }
+
+    .maker-text h3 {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .maker-text p {
+      margin-bottom: 8px;
+    }
+
+    .bullet-lines p {
+      margin-bottom: 6px;
+    }
+
+    .text-placeholder {
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .detail-row {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-label {
+        border-right: none;
+        border-bottom: 1px solid #cfcfcf;
+      }
+
+      .maker-block {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="award-detail-page">
+    <div class="award-detail-wrap">
+      <a href="../index.html#directory" class="back-link">← 認証一覧へ戻る</a>
+
+      <div class="detail-sheet">
+
+        <div class="detail-row">
+          <div class="detail-label">商品名</div>
+          <div class="detail-content detail-title">3種のベリーのオペラ</div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">価格</div>
+          <div class="detail-content detail-price">500円（1個）</div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">メイン画像</div>
+          <div class="detail-content">
+            <img src="../images/opera-main.jpg" alt="3種のベリーのオペラ メイン画像" class="main-photo" />
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">商品説明</div>
+          <div class="detail-content">
+            コーヒー風味のバタークリームに徹底したこだわりを持ち、控えめな甘さで特に大人の女性に人気の商品。  
+            滑らかなチョコレートの表面に飾りと金箔の模様が特徴的で、気品あふれる見た目に加え、3種類のベリーが使われた生地の香りが引き立ちます。  
+            価格からは想像できないほど上質に作り込まれており、誰をももっとりとさせるに違いありません。
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">関連画像</div>
+          <div class="detail-content">
+            <div class="photo-grid">
+              <img src="../images/opera-sub1.jpg" alt="オペラ関連画像1" />
+              <img src="../images/opera-sub2.jpg" alt="オペラ関連画像2" />
+              <img src="../images/opera-sub3.jpg" alt="オペラ関連画像3" />
+              <img src="../images/opera-sub4.jpg" alt="オペラ関連画像4" />
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">◆このお菓子を作った人</div>
+          <div class="detail-content">
+            <div class="maker-block">
+              <img src="../images/opera-maker.jpg" alt="パティシエ 伊東福子さん" class="maker-photo" />
+              <div class="maker-text">
+                <h3>パティシエ　伊東福子さん</h3>
+                <p><strong>略歴（100w程度）</strong></p>
+                <p class="text-placeholder">
+                  ここに略歴テキストが入ります。洋菓子づくりに携わってきた背景や、
+                  この商品に込めた想い、得意とする表現などを記載してください。
+                </p>
+                <div class="bullet-lines">
+                  <p>ここにテキストが入ります</p>
+                  <p>ここにテキストが入ります</p>
+                  <p>ここにテキストが入ります</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>
