@@ -1996,3 +1996,16 @@ ul, ol { list-style: none; }
     gap: 0.5rem;
   }
 }
+.award-showcase {
+  margin-top: 2rem;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.award-showcase-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
