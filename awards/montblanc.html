@@ -17,7 +17,7 @@
     }
 
     .product-detail-wrap {
-      max-width: 1280px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -43,18 +43,14 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 56px;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
       align-items: center;
     }
 
     .hero-visual {
       background: #ece7de;
       border: 1px solid #d9d1c4;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
     }
 
@@ -65,9 +61,13 @@
       display: block;
     }
 
+    .hero-copy {
+      min-width: 0;
+    }
+
     .eyebrow {
       display: inline-block;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
       font-size: 0.82rem;
       letter-spacing: 0.18em;
       color: #9b7e57;
@@ -76,29 +76,29 @@
     .product-title {
       font-family: "Noto Serif JP", serif;
       font-size: clamp(2.3rem, 4vw, 4rem);
-      line-height: 1.3;
+      line-height: 1.25;
       color: #20354d;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       font-weight: 600;
     }
 
     .product-lead {
-      font-size: 1.05rem;
+      font-size: 1.04rem;
       line-height: 1.95;
       color: #6b6b6b;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .meta-table {
       border-top: 1px solid #ddd5c8;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .meta-row {
       display: grid;
-      grid-template-columns: 140px 1fr;
+      grid-template-columns: 120px 1fr;
       gap: 16px;
-      padding: 18px 0;
+      padding: 16px 0;
       border-bottom: 1px solid #ddd5c8;
       align-items: center;
     }
@@ -125,7 +125,7 @@
       align-items: center;
       justify-content: center;
       min-width: 220px;
-      padding: 18px 28px;
+      padding: 16px 24px;
       border: 1px solid #1a2e44;
       text-decoration: none;
       font-size: 0.95rem;
@@ -153,22 +153,12 @@
       color: #fff;
     }
 
-    .detail-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-bottom: 28px;
-    }
-
-    .content-card {
+    .section-card {
       background: #fff;
       border: 1px solid #e3dbce;
       padding: 30px;
+      margin-bottom: 24px;
       box-shadow: 0 2px 10px rgba(26,46,68,0.04);
-    }
-
-    .content-card.full {
-      grid-column: 1 / -1;
     }
 
     .section-title-local {
@@ -222,10 +212,10 @@
       background: #ece7de;
       border: 1px solid #ddd5c8;
       min-height: 180px;
-      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     .gallery-item img {
@@ -246,17 +236,16 @@
       grid-template-columns: 220px 1fr;
       gap: 24px;
       align-items: start;
-      margin-top: 8px;
     }
 
     .maker-photo-wrap {
       background: #ece7de;
       border: 1px solid #ddd5c8;
       min-height: 240px;
-      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     .maker-photo-wrap img {
@@ -311,17 +300,17 @@
       line-height: 1.9;
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 980px) {
       .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .detail-grid {
         grid-template-columns: 1fr;
       }
 
       .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .maker-block {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -331,14 +320,12 @@
       }
 
       .hero-section,
-      .content-card,
+      .section-card,
       .note-box {
         padding: 22px;
       }
 
-      .hero-visual,
       .hero-visual img {
-        min-height: 320px;
         height: 320px;
       }
 
@@ -349,10 +336,6 @@
       .meta-row {
         grid-template-columns: 1fr;
         gap: 6px;
-      }
-
-      .maker-block {
-        grid-template-columns: 1fr;
       }
 
       .gallery-grid {
@@ -373,7 +356,7 @@
       <section class="hero-section">
         <div class="hero-grid">
           <div class="hero-visual">
-            <img src="/iimono-award/images/montblanc-main.jpg"
+            <img src="/iimono-award/images/montblanc-main.jpg" alt="モンブラン" />
           </div>
 
           <div class="hero-copy">
@@ -407,77 +390,75 @@
         </div>
       </section>
 
-      <section class="detail-grid">
-        <div class="content-card">
-          <h2 class="section-title-local">この商品の魅力</h2>
-          <p class="lead-copy">
-            ひと目で印象に残る立体的なビジュアルと、丁寧に絞られた栗のクリームが特徴のモンブランです。
-            見た目の華やかさだけでなく、口に入れた瞬間に広がる栗の風味、なめらかな舌触り、重すぎない後味までバランス良く設計されています。
-          </p>
-          <p class="normal-copy">
-            見た目のインパクトがありながら、食べ進めるほどに上品さが際立つ一品。
-            手土産としても、自分へのご褒美としても選ばれやすく、価格以上の満足感を感じさせる完成度の高さが魅力です。
-          </p>
-        </div>
+      <section class="section-card">
+        <h2 class="section-title-local">この商品の魅力</h2>
+        <p class="lead-copy">
+          ひと目で印象に残る立体的なビジュアルと、丁寧に絞られた栗のクリームが特徴のモンブランです。
+          見た目の華やかさだけでなく、口に入れた瞬間に広がる栗の風味、なめらかな舌触り、重すぎない後味までバランス良く設計されています。
+        </p>
+        <p class="normal-copy">
+          見た目のインパクトがありながら、食べ進めるほどに上品さが際立つ一品。
+          手土産としても、自分へのご褒美としても選ばれやすく、価格以上の満足感を感じさせる完成度の高さが魅力です。
+        </p>
+      </section>
 
-        <div class="content-card">
-          <h2 class="section-title-local">iimono award 認証理由</h2>
-          <div class="reason-list">
-            <div class="reason-item">
-              <strong>1. 見た目の存在感</strong>
-              一目で印象に残る立体的なフォルムと、栗の魅力を前面に出した造形が高く評価されました。
-            </div>
-            <div class="reason-item">
-              <strong>2. 栗の風味表現</strong>
-              モンブランとしての王道感を持ちながら、素材の風味をしっかり感じさせる設計が魅力です。
-            </div>
-            <div class="reason-item">
-              <strong>3. 満足感と軽やかさの両立</strong>
-              見た目の重厚感に対して、食べ心地は重すぎず、最後まで心地よく楽しめる構成になっています。
-            </div>
-            <div class="reason-item">
-              <strong>4. 価格との価値バランス</strong>
-              680円という価格帯で、特別感・完成度・満足度が高い水準でまとまっている点が認証理由です。
-            </div>
+      <section class="section-card">
+        <h2 class="section-title-local">iimono award 認証理由</h2>
+        <div class="reason-list">
+          <div class="reason-item">
+            <strong>1. 見た目の存在感</strong>
+            一目で印象に残る立体的なフォルムと、栗の魅力を前面に出した造形が高く評価されました。
+          </div>
+          <div class="reason-item">
+            <strong>2. 栗の風味表現</strong>
+            モンブランとしての王道感を持ちながら、素材の風味をしっかり感じさせる設計が魅力です。
+          </div>
+          <div class="reason-item">
+            <strong>3. 満足感と軽やかさの両立</strong>
+            見た目の重厚感に対して、食べ心地は重すぎず、最後まで心地よく楽しめる構成になっています。
+          </div>
+          <div class="reason-item">
+            <strong>4. 価格との価値バランス</strong>
+            680円という価格帯で、特別感・完成度・満足度が高い水準でまとまっている点が認証理由です。
           </div>
         </div>
+      </section>
 
-        <div class="content-card full">
-          <h2 class="section-title-local">商品ギャラリー</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 1</div></div>
-            <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 2</div></div>
-            <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 3</div></div>
-            <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 4</div></div>
-          </div>
+      <section class="section-card">
+        <h2 class="section-title-local">商品ギャラリー</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 1</div></div>
+          <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 2</div></div>
+          <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 3</div></div>
+          <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 4</div></div>
         </div>
+      </section>
 
-        <div class="content-card full">
-          <h2 class="section-title-local">このお菓子を作った人</h2>
-          <div class="maker-block">
-            <div class="maker-photo-wrap">
-              <div class="maker-photo-placeholder">PATISSIER PHOTO</div>
-            </div>
+      <section class="section-card">
+        <h2 class="section-title-local">このお菓子を作った人</h2>
+        <div class="maker-block">
+          <div class="maker-photo-wrap">
+            <div class="maker-photo-placeholder">PATISSIER PHOTO</div>
+          </div>
 
-            <div>
-              <div class="maker-name">いいモノ cafe パティシエ</div>
+          <div>
+            <div class="maker-name">いいモノ cafe パティシエ</div>
+            <p class="normal-copy">
+              素材の魅力を端正に引き出す洋菓子づくりを得意とし、見た目の美しさと味わいの奥行きを両立する商品設計を大切にしている作り手です。
+              特にモンブランでは、栗の風味を主役にしながら、全体の食感と余韻まで丁寧に整えることを重視しています。
+            </p>
+
+            <div class="maker-career">
+              <strong>略歴</strong>
               <p class="normal-copy">
-                素材の魅力を端正に引き出す洋菓子づくりを得意とし、見た目の美しさと味わいの奥行きを両立する商品設計を大切にしている作り手です。
-                特にモンブランでは、栗の風味を主役にしながら、全体の食感と余韻まで丁寧に整えることを重視しています。
+                ここに100文字程度の略歴を入れられます。モンブランや栗菓子へのこだわり、洋菓子づくりに携わってきた背景などを簡潔にまとめる想定です。
               </p>
+            </div>
 
-              <div class="maker-career">
-                <strong>略歴</strong>
-                <p class="normal-copy">
-                  ここに100文字程度の略歴を入れられます。モンブランや栗菓子へのこだわり、洋菓子づくりに携わってきた背景などを簡潔にまとめる想定です。
-                </p>
-              </div>
-
-              <div class="maker-points">
-                <div>・栗の風味を活かした洋菓子設計を得意とする</div>
-                <div>・見た目の美しさと上品な後味を重視</div>
-                <div>・ご褒美感のある商品づくりを大切にしている</div>
-              </div>
+            <div class="maker-points">
+              <div>・栗の風味を活かした洋菓子設計を得意とする</div>
+              <div>・見た目の美しさと上品な後味を重視</div>
+              <div>・ご褒美感のある商品づくりを大切にしている</div>
             </div>
           </div>
         </div>
