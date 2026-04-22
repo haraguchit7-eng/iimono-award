@@ -3,959 +3,346 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iimono award｜いいモノの価値を、誠実に見極め、社会へひらく。</title>
-  <meta name="description" content="iimono awardは、日本の生活•文化の向上と規範となる価値観を創り、頑張っている生産者を応援する認証機関です。" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
-
-  <!-- Main CSS -->
+  <title>iimono award | いいモノに、信頼という証明を。</title>
+  <meta name="description" content="iimono awardは、価値ある商品・サービスを中立的な視点で認証し、その魅力と信頼を社会に届ける認証機関です。" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Award Index Table CSS -->
-  <style>
-    .award-index-block {
-      margin-top: 2rem;
-    }
-
-    .award-index-header {
-      margin-bottom: 1.5rem;
-    }
-
-    .award-index-mark {
-      font-family: "Noto Sans JP", sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #000;
-      letter-spacing: 0.04em;
-      margin-bottom: 1rem;
-    }
-
-    .award-index-header h3 {
-      font-family: "Noto Sans JP", sans-serif;
-      font-size: clamp(2rem, 4vw, 3.3rem);
-      line-height: 1.25;
-      font-weight: 800;
-      color: #000;
-      margin-bottom: 0.4rem;
-    }
-
-    .award-index-header p {
-      font-family: "Noto Sans JP", sans-serif;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      line-height: 1.25;
-      font-weight: 800;
-      color: #000;
-    }
-
-    .award-index-table-wrap {
-      overflow-x: auto;
-      background: #fff;
-      border: 1px solid #cfcfcf;
-    }
-
-    .award-index-table {
-      width: 100%;
-      min-width: 1120px;
-      border-collapse: collapse;
-      table-layout: fixed;
-      background: #fff;
-    }
-
-    .award-index-table th,
-    .award-index-table td {
-      border: 1px solid #cfcfcf;
-      padding: 12px;
-      vertical-align: middle;
-      font-family: "Noto Sans JP", sans-serif;
-      color: #111;
-    }
-
-    .award-index-table .label-cell {
-      width: 140px;
-      background: #f6f6f6;
-      text-align: center;
-      font-size: 1rem;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-
-    .award-index-table .period-cell,
-    .award-index-table .division-cell {
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-
-    .award-index-table .product-name-cell {
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
-
-    .award-index-table .image-cell {
-      padding: 0;
-    }
-
-    .award-index-table .image-cell img {
-      display: block;
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-
-    .award-index-table .image-cell-highlight {
-      outline: 4px solid #2546ff;
-      outline-offset: -4px;
-    }
-
-    .detail-link-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 18px;
-      border: 1px solid #1a2e44;
-      color: #1a2e44;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .detail-link-btn:hover {
-      background: #1a2e44;
-      color: #fff;
-    }
-
-    @media (max-width: 640px) {
-      .award-index-mark {
-        font-size: 1.6rem;
-      }
-
-      .award-index-header h3 {
-        font-size: 2rem;
-      }
-
-      .award-index-header p {
-        font-size: 1.7rem;
-      }
-
-      .award-index-table .image-cell img {
-        height: 220px;
-      }
-    }
-  </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="site-logo">iimono award</a>
 
-  <!-- ============================================================
-       HEADER / NAVIGATION
-  ============================================================ -->
-  <header id="site-header">
-    <div class="header-inner">
-      <a href="#top" class="logo" aria-label="iimono award トップページへ">
-        <span class="logo-en">iimono award</span>
-        <span class="logo-jp">認証機関</span>
-      </a>
-      <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
-        <ul>
-          <li><a href="#philosophy">私たちについて</a></li>
-          <li><a href="#certification">認証制度</a></li>
-          <li><a href="#directory">認証一覧</a></li>
-          <li><a href="#report">レポート</a></li>
-          <li><a href="#governance">ガバナンス</a></li>
-          <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
-        </ul>
+      <nav class="site-nav">
+        <a href="#philosophy">認証思想</a>
+        <a href="#directory">認証一覧</a>
+        <a href="#standards">評価基準</a>
+        <a href="#flow">認証フロー</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+
+      <a href="#cta" class="header-cta">認証申請はこちら</a>
     </div>
   </header>
 
-  <!-- Mobile Nav Overlay -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
-    <nav class="mobile-nav" aria-label="モバイルナビゲーション">
-      <ul>
-        <li><a href="#philosophy">私たちについて</a></li>
-        <li><a href="#certification">認証制度について</a></li>
-        <li><a href="#directory">認証一覧</a></li>
-        <li><a href="#report">レポート・インサイト</a></li>
-        <li><a href="#for-business">経営者・企業の方へ</a></li>
-        <li><a href="#governance">ガバナンス</a></li>
-        <li><a href="#news">ニュース</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
-    </nav>
-  </div>
-
   <main id="top">
 
-    <!-- ============================================================
-         HERO / FIRST VIEW
-    ============================================================ -->
-    <section class="hero" id="hero">
-      <div class="hero-bg">
-        <div class="hero-bg-pattern"></div>
-      </div>
-      <div class="hero-content">
-        <div class="hero-badge reveal">
-          <span class="badge-line"></span>
-          <span class="badge-text">Certification of Excellence</span>
-          <span class="badge-line"></span>
-        </div>
-        <h1 class="hero-title reveal reveal-delay-1">
-          いいモノには、<br class="sp-only" />
-          <em>理由</em>がある。
-        </h1>
-        <p class="hero-lead reveal reveal-delay-2">
-          iimono awardは、日本の生活•文化の向上と規範となる価値観を創り、<br class="pc-only" />
-          頑張っている生産者を応援する認証機関です。<br class="pc-only" />
-        </p>
-        <div class="hero-cta reveal reveal-delay-3">
-          <a href="#directory" class="btn btn-primary">認証一覧を見る</a>
-          <a href="#certification" class="btn btn-outline">認証制度について</a>
-        </div>
-        <div class="hero-trust reveal reveal-delay-4">
-          <div class="trust-item">
-            <i class="fas fa-check-circle"></i>
-            <span>評価基準を公開</span>
-          </div>
-          <div class="trust-item">
-            <i class="fas fa-check-circle"></i>
-            <span>委員会審議を実施</span>
-          </div>
-          <div class="trust-item">
-            <i class="fas fa-check-circle"></i>
-            <span>更新制度あり</span>
-          </div>
-          <div class="trust-item">
-            <i class="fas fa-check-circle"></i>
-            <span>利益相反ポリシーを明示</span>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">TRUSTED CURATION FOR EXCEPTIONAL PRODUCTS</p>
+          <h1 class="hero-title">
+            いいモノに、<br />
+            信頼という証明を。
+          </h1>
+          <p class="hero-text">
+            iimono awardは、価値ある商品・サービスを中立的な視点で認証し、
+            その魅力と信頼を社会へ届ける認証機関です。<br />
+            見た目の美しさだけでなく、品質、背景、想い、体験価値までを丁寧に見つめ、
+            「選ばれる理由」を可視化します。
+          </p>
+
+          <div class="hero-actions">
+            <a href="#directory" class="btn btn-primary">認証商品を見る</a>
+            <a href="#philosophy" class="btn btn-secondary">認証制度について</a>
           </div>
         </div>
-      </div>
-      <div class="hero-scroll">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
+
+        <div class="hero-panel">
+          <div class="hero-stat-card">
+            <div class="hero-stat-number">2026</div>
+            <div class="hero-stat-label">上半期 認証開始</div>
+          </div>
+
+          <div class="hero-stat-card">
+            <div class="hero-stat-number">3</div>
+            <div class="hero-stat-label">認証商品掲載中</div>
+          </div>
+
+          <div class="hero-stat-card">
+            <div class="hero-stat-number">4</div>
+            <div class="hero-stat-label">評価観点で審査</div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         MISSION STRIP
-    ============================================================ -->
-    <section class="mission-strip">
+    <section class="section section-light" id="philosophy">
       <div class="container">
-        <p class="mission-copy reveal">
-          価値ある一品を、印象ではなく根拠で伝える。
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         PHILOSOPHY（私たちについて）
-    ============================================================ -->
-    <section class="section" id="philosophy">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Philosophy</span>
-          <h2 class="section-title">私たちについて</h2>
-          <p class="section-subtitle">「いいモノ」が、正当に選ばれる社会へ。</p>
+        <div class="section-heading">
+          <p class="eyebrow">PHILOSOPHY</p>
+          <h2>認証思想</h2>
+          <p>
+            iimono awardは、単なるランキングでも、広告でもありません。<br />
+            「本当に良いものが、正しく伝わり、選ばれる社会」をつくるための認証です。
+          </p>
         </div>
 
         <div class="philosophy-grid">
-          <div class="philosophy-main reveal">
-            <p class="lead-text">
-              日本の生活・文化において「いいモノ」における規範となる<strong>「価値観」</strong>をつくりあげたい。
-            </p>
+          <article class="info-card">
+            <h3>中立性</h3>
             <p>
-              つまり、<strong>「いいモノのスタンダード」</strong>をつくりあげたいという想いで、この機関を立ち上げました。
+              売るためだけの見せ方ではなく、価値の本質に向き合います。
+              見た目や話題性だけに偏らず、商品そのものの完成度を評価します。
             </p>
-            <p>
-              私たちは、「いいモノのスタンダード」とは、水や空気のような存在——日常に寄り添うようにあって当たり前、いいモノで世界中を笑顔にする、そういう機関・サービスになることだと考えています。
-            </p>
-            <p>
-              私たちは、権威性と信頼性を重視し、いいモノの規範となる「価値観」をつくる活動を行います。<br />
-              「いいモノ」に特化した認証機関として、<strong>「生産者」と伴走し</strong>、モノづくりへの「想い」と価値ある「一品」を紹介し、<strong>「生産者」を最大限に応援します。</strong>
-            </p>
-          </div>
-          <div class="philosophy-values reveal reveal-delay-1">
-            <div class="value-card">
-              <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
-              <h3>透明性</h3>
-              <p>評価基準と審査プロセスを公開し、判断の根拠にアクセスできる状態を整えます。</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
-              <h3>中立性</h3>
-              <p>利益相反管理を徹底し、評価判断の独立性と公正性を担保します。</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon"><i class="fas fa-handshake"></i></div>
-              <h3>伴走性</h3>
-              <p>生産者の背景や思想を丁寧に言語化し、社会に正しく届けます。</p>
-            </div>
-          </div>
-        </div>
+          </article>
 
-        <div class="market-issue reveal">
-          <div class="market-issue-header">
-            <span class="section-label">Background</span>
-            <h3>なぜこの制度が必要なのか</h3>
-          </div>
-          <p class="market-issue-lead">
-            情報が多い時代ほど、信頼できる基準が必要です。
-          </p>
-          <div class="issue-list">
-            <div class="issue-item">
-              <span class="issue-num">01</span>
-              <div class="issue-content">
-                <h4>情報過多による判断困難</h4>
-                <p>レビュー、SNS評判、広告、PR記事が混在し、何を信じてよいか判断しにくい環境が生まれています。</p>
-              </div>
-            </div>
-            <div class="issue-item">
-              <span class="issue-num">02</span>
-              <div class="issue-content">
-                <h4>本質的な価値が埋もれる</h4>
-                <p>短期的な話題性や広告予算の大小が、本来の品質評価に優先されてしまいます。</p>
-              </div>
-            </div>
-            <div class="issue-item">
-              <span class="issue-num">03</span>
-              <div class="issue-content">
-                <h4>評価基準の不透明さ</h4>
-                <p>根拠が曖昧なまま「おすすめ」が流通し、生活者と生産者の間に理解の断絶が生じています。</p>
-              </div>
-            </div>
-          </div>
+          <article class="info-card">
+            <h3>透明性</h3>
+            <p>
+              どのような視点で評価したのかを明確にし、
+              認証の背景が見える設計を大切にしています。
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>信頼性</h3>
+            <p>
+              消費者・事業者の双方にとって、
+              「この認証なら見る価値がある」と思える信頼の土台をつくります。
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>伴走性</h3>
+            <p>
+              事業者の想いやこだわりを掘り起こし、
+              良い商品がより伝わる状態を一緒につくることも重視します。
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         CERTIFICATION（認証制度について）
-    ============================================================ -->
-    <section class="section section-alt" id="certification">
+    <section class="section" id="directory">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Certification</span>
-          <h2 class="section-title">認証制度について</h2>
-          <p class="section-subtitle">評価の結果だけでなく、評価の過程にも透明性を。</p>
-        </div>
-
-        <div class="cert-intro reveal">
+        <div class="section-heading">
+          <p class="eyebrow">DIRECTORY</p>
+          <h2>認証一覧</h2>
           <p>
-            iimono awardの認証制度は、優れた商品・サービスを選びやすくするためだけのものではありません。生産者・事業者が積み重ねてきた価値を、<strong>社会に対して公正かつ明快に伝えるための制度</strong>です。
+            2026年上半期に認証された商品をご紹介します。<br />
+            商品ごとの魅力や認証理由、作り手の背景までご覧いただけます。
           </p>
         </div>
 
-        <div class="cert-section reveal">
-          <h3 class="cert-section-title">
-            <span class="cert-num">01</span>評価基準
-          </h3>
-          <p class="cert-section-lead">単一の尺度ではなく、総合的に評価します。</p>
-          <div class="criteria-grid">
-            <div class="criteria-item">
-              <div class="criteria-icon"><i class="fas fa-gem"></i></div>
-              <h4>品質・提供価値</h4>
-              <p>継続的に提供される品質、使用体験、機能性、再現性を確認します。</p>
-            </div>
-            <div class="criteria-item">
-              <div class="criteria-icon"><i class="fas fa-lightbulb"></i></div>
-              <h4>背景・思想の明確性</h4>
-              <p>何を大切にしてつくられているか、その哲学や姿勢が一貫しているかを見ます。</p>
-            </div>
-            <div class="criteria-item">
-              <div class="criteria-icon"><i class="fas fa-file-alt"></i></div>
-              <h4>情報開示の誠実性</h4>
-              <p>商品・サービスに関する説明が正確で、生活者に誤認を与えないかを確認します。</p>
-            </div>
-            <div class="criteria-item">
-              <div class="criteria-icon"><i class="fas fa-cogs"></i></div>
-              <h4>運営・提供体制</h4>
-              <p>安定した提供体制や問い合わせ対応、継続改善の姿勢を確認します。</p>
-            </div>
-            <div class="criteria-item">
-              <div class="criteria-icon"><i class="fas fa-leaf"></i></div>
-              <h4>社会との関係性</h4>
-              <p>地域性、持続可能性、関係者への配慮など、広い意味での責任ある運営を見ます。</p>
-            </div>
-          </div>
-          <p class="criteria-note">※評価項目の詳細は、カテゴリーごとの審査要項に基づき公開します。</p>
+        <div class="award-grid">
+
+          <article class="award-card">
+            <a href="awards/montblanc.html" class="award-card-link">
+              <div class="award-image-placeholder">
+                <img src="/iimono-award/images/montblanc-main.png" alt="モンブラン">
+              </div>
+
+              <div class="award-body">
+                <div class="award-badge">2026 上半期 認証商品</div>
+                <h3 class="award-name">モンブラン</h3>
+                <p class="award-price">680円（1個）</p>
+                <p class="award-shop">いいモノ cafe</p>
+                <span class="award-link-text">詳細を見る</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="award-card">
+            <a href="awards/tart.html" class="award-card-link">
+              <div class="award-image-placeholder">
+                <img src="/iimono-award/images/tart-main.png" alt="旬の果物のタルト">
+              </div>
+
+              <div class="award-body">
+                <div class="award-badge">2026 上半期 認証商品</div>
+                <h3 class="award-name">旬の果物のタルト</h3>
+                <p class="award-price">790円（1個）</p>
+                <p class="award-shop">iimono洋菓子店</p>
+                <span class="award-link-text">詳細を見る</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="award-card">
+            <a href="awards/opera.html" class="award-card-link">
+              <div class="award-image-placeholder">
+                <img src="/iimono-award/images/opera-main.png" alt="3種のベリーのオペラ">
+              </div>
+
+              <div class="award-body">
+                <div class="award-badge">2026 上半期 認証商品</div>
+                <h3 class="award-name">3種のベリーのオペラ</h3>
+                <p class="award-price">500円（1個）</p>
+                <p class="award-shop">パティスリーいいモノ</p>
+                <span class="award-link-text">詳細を見る</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="standards">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">STANDARDS</p>
+          <h2>評価基準</h2>
+          <p>
+            iimono awardでは、単純な人気や話題性ではなく、
+            商品としての総合力を複数の観点から評価します。
+          </p>
         </div>
 
-        <div class="cert-section reveal">
-          <h3 class="cert-section-title">
-            <span class="cert-num">02</span>評価プロセス
-          </h3>
-          <p class="cert-section-lead">評価の過程を、ステップごとに公開しています。</p>
-          <div class="process-steps">
-            <div class="process-step">
-              <div class="step-num">01</div>
-              <div class="step-content">
-                <h4>申請・推薦受付</h4>
-                <p>企業・生産者からの申請、または所定の推薦ルートを通じて対象を受け付けます。</p>
-              </div>
-            </div>
-            <div class="process-arrow"><i class="fas fa-chevron-down"></i></div>
-            <div class="process-step">
-              <div class="step-num">02</div>
-              <div class="step-content">
-                <h4>基礎情報の確認</h4>
-                <p>企業情報、商品・サービス概要、運営体制、開示情報などの基本資料を確認します。</p>
-              </div>
-            </div>
-            <div class="process-arrow"><i class="fas fa-chevron-down"></i></div>
-            <div class="process-step">
-              <div class="step-num">03</div>
-              <div class="step-content">
-                <h4>書類審査</h4>
-                <p>評価基準に沿って、品質・背景・説明責任・継続性等を整理し、一次評価を行います。</p>
-              </div>
-            </div>
-            <div class="process-arrow"><i class="fas fa-chevron-down"></i></div>
-            <div class="process-step">
-              <div class="step-num">04</div>
-              <div class="step-content">
-                <h4>ヒアリング・追加確認</h4>
-                <p>必要に応じて、運営者へのヒアリング、資料補足、現地確認等を実施します。</p>
-              </div>
-            </div>
-            <div class="process-arrow"><i class="fas fa-chevron-down"></i></div>
-            <div class="process-step">
-              <div class="step-num">05</div>
-              <div class="step-content">
-                <h4>評価委員会での審議</h4>
-                <p>外部有識者を含む委員会が、定められた基準に基づいて総合判断を行います。</p>
-              </div>
-            </div>
-            <div class="process-arrow"><i class="fas fa-chevron-down"></i></div>
-            <div class="process-step">
-              <div class="step-num">06</div>
-              <div class="step-content">
-                <h4>認証決定・公開</h4>
-                <p>認証可否を通知し、認証対象については認証理由・掲載情報を公開します。</p>
-              </div>
-            </div>
-          </div>
+        <div class="standards-grid">
+          <article class="standard-card">
+            <span class="standard-number">01</span>
+            <h3>完成度</h3>
+            <p>見た目、味、設計、価格との整合性など、商品全体としての完成度を評価します。</p>
+          </article>
+
+          <article class="standard-card">
+            <span class="standard-number">02</span>
+            <h3>独自性</h3>
+            <p>素材選び、構成、見せ方、背景にある工夫など、その商品ならではの個性を見ます。</p>
+          </article>
+
+          <article class="standard-card">
+            <span class="standard-number">03</span>
+            <h3>体験価値</h3>
+            <p>贈り物、自分へのご褒美、手土産など、実際の利用シーンで生まれる満足度を重視します。</p>
+          </article>
+
+          <article class="standard-card">
+            <span class="standard-number">04</span>
+            <h3>信頼性</h3>
+            <p>作り手の姿勢、商品背景、継続性、ブランドとしての誠実さも認証の重要な観点です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="merit">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MERIT</p>
+          <h2>認証されるメリット</h2>
+          <p>
+            認証は単なる称号ではなく、
+            商品の信頼性・伝達力・選ばれやすさを高めるための仕組みです。
+          </p>
         </div>
 
-        <div class="cert-section reveal">
-          <h3 class="cert-section-title">
-            <span class="cert-num">03</span>利益相反ポリシー
-          </h3>
-          <p class="cert-section-lead">中立性を守るための仕組みを、制度として整えています。</p>
-          <div class="policy-list">
-            <div class="policy-item">
-              <i class="fas fa-check"></i>
-              <p>評価委員は、利害関係のある案件の審議に参加しません。</p>
-            </div>
-            <div class="policy-item">
-              <i class="fas fa-check"></i>
-              <p>申請受付と評価判断は、役割を分離して運用します。</p>
-            </div>
-            <div class="policy-item">
-              <i class="fas fa-check"></i>
-              <p>認証取得の可否が、広告出稿や協賛の有無によって左右されることはありません。</p>
-            </div>
-            <div class="policy-item">
-              <i class="fas fa-check"></i>
-              <p>相談・支援サービスを提供する場合も、審査部門とは切り分けて運営します。</p>
-            </div>
-            <div class="policy-item">
-              <i class="fas fa-check"></i>
-              <p>制度内容、評価観点、更新方針を継続的に公開します。</p>
-            </div>
+        <div class="merit-grid">
+          <article class="info-card">
+            <h3>信頼の獲得</h3>
+            <p>第三者視点の認証により、初見の顧客にも価値が伝わりやすくなります。</p>
+          </article>
+
+          <article class="info-card">
+            <h3>魅力の言語化</h3>
+            <p>商品の良さを、消費者に届く言葉と構造で整理し、伝達力を高めます。</p>
+          </article>
+
+          <article class="info-card">
+            <h3>販路での活用</h3>
+            <p>LP、EC、営業資料、店頭POPなどで、認証実績をそのまま活用できます。</p>
+          </article>
+
+          <article class="info-card">
+            <h3>ブランド価値向上</h3>
+            <p>「良い商品をつくっているブランド」という印象形成につながります。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="flow">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FLOW</p>
+          <h2>認証フロー</h2>
+          <p>
+            申請から掲載まで、わかりやすく進められる流れを整えています。
+          </p>
+        </div>
+
+        <div class="flow-list">
+          <div class="flow-item">
+            <span class="flow-step">STEP 1</span>
+            <h3>申請</h3>
+            <p>商品情報、画像、価格、こだわり、作り手背景など必要情報をご提出いただきます。</p>
           </div>
-          <div class="policy-note">
-            <i class="fas fa-quote-left"></i>
-            <p>私たちは、認証されること以上に、<strong>認証の仕組みそのものが信頼されること</strong>を重視しています。</p>
+
+          <div class="flow-item">
+            <span class="flow-step">STEP 2</span>
+            <h3>審査</h3>
+            <p>評価基準に基づき、商品としての完成度や魅力、信頼性を総合的に確認します。</p>
+          </div>
+
+          <div class="flow-item">
+            <span class="flow-step">STEP 3</span>
+            <h3>掲載準備</h3>
+            <p>認証理由の整理、紹介文の設計、必要に応じた魅力の言語化を進めます。</p>
+          </div>
+
+          <div class="flow-item">
+            <span class="flow-step">STEP 4</span>
+            <h3>認証・公開</h3>
+            <p>認証商品として公開し、一覧ページや詳細ページで価値を伝えていきます。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         DIRECTORY（認証一覧）
-    ============================================================ -->
-<section class="section" id="directory">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Directory</span>
-      <h2 class="section-title">認証一覧</h2>
-      <p class="section-subtitle">認証された価値を、一覧で確認する。</p>
-    </div>
-
-    <p class="directory-intro reveal">
-      このページでは、iimono awardが認証した商品をご覧いただけます。
-    </p>
-
-    <div class="award-grid reveal">
-
-      <article class="award-card">
-
-  <div class="award-image-placeholder">
-    <img src="/iimono-award/images/montblanc-main.png" alt="モンブラン">
-  </div>
-
-  <div class="award-badge">2026 上半期 認証商品</div>
-
-  <h3 class="award-name">モンブラン</h3>
-
-  <p class="award-price">680円（1個）</p>
-
-  <p class="award-shop">いいモノ cafe</p>
-
-  <a href="awards/montblanc.html">詳細を見る</a>
-
-</article>
-
-   <article class="award-card">
-
-  <div class="award-image-placeholder">
-    <img src="/iimono-award/images/tart-main.png" alt="旬の果物のタルト">
-  </div>
-
-  <div class="award-badge">2026 上半期 認証商品</div>
-
-  <h3 class="award-name">旬の果物のタルト</h3>
-
-  <p class="award-price">790円（1個）</p>
-
-  <p class="award-shop">iimono洋菓子店</p>
-
-  <a href="awards/tart.html">詳細を見る</a>
-
-</article>
-
-    <article class="award-card">
-
-  <div class="award-image-placeholder">
-    <img src="/iimono-award/images/opera-main.png" alt="3種のベリーのオペラ">
-  </div>
-
-  <div class="award-badge">2026 上半期 認証商品</div>
-
-  <h3 class="award-name">3種のベリーのオペラ</h3>
-
-  <p class="award-price">500円（1個）</p>
-
-  <p class="award-shop">パティスリーいいモノ</p>
-
-  <a href="awards/opera.html">詳細を見る</a>
-
-</article>
-
-    </div>
-
-    <p class="award-note">※価格はすべて税込表記です。</p>
-  </div>
-</section>
-    <!-- ============================================================
-         REPORT / INSIGHT
-    ============================================================ -->
-    <section class="section section-alt" id="report">
+    <section class="section" id="faq">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Report &amp; Insight</span>
-          <h2 class="section-title">レポート・インサイト</h2>
-          <p class="section-subtitle">「いいモノ」の価値を、個別事例だけで終わらせない。</p>
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>よくある質問</h2>
         </div>
 
-        <p class="report-intro reveal">
-          iimono awardでは、認証活動を通じて得られた知見を、市場理解や信頼設計に関するレポートとして発信します。
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>どのような商品が対象ですか？</summary>
+            <p>食品をはじめ、今後は幅広い商品・サービスも対象とする想定です。詳細は申請時にご確認ください。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>認証されれば必ず売上が伸びますか？</summary>
+            <p>売上を保証するものではありませんが、信頼性・訴求力・選ばれる理由を明確にすることで販売に活かしやすくなります。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>写真や紹介文の整備も相談できますか？</summary>
+            <p>はい。商品の魅力がより伝わる見せ方や言語化も含めて整備していく前提で設計しています。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>申請には何が必要ですか？</summary>
+            <p>商品名、画像、価格、作り手情報、特徴やこだわりなど、審査に必要な情報をご提出いただきます。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="cta">
+      <div class="container cta-inner">
+        <p class="eyebrow">ENTRY</p>
+        <h2>あなたの「いいモノ」を、<br>信頼ある認証へ。</h2>
+        <p>
+          商品の魅力を正しく届けたい方へ。<br />
+          iimono award は、価値のある商品が選ばれるための土台をつくります。
         </p>
 
-        <div class="report-grid">
-          <div class="report-card reveal featured-report">
-            <div class="report-tag">年次レポート</div>
-            <h3>2026年度 iimono award 年次レポート</h3>
-            <p>年間の認証件数、カテゴリー傾向、制度改定、委員会活動報告、透明性・利益相反管理の運用報告をまとめました。</p>
-            <a href="#" class="report-link">レポートを読む <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="report-card reveal reveal-delay-1">
-            <div class="report-tag">市場レポート</div>
-            <h3>地域産品における信頼形成の変化</h3>
-            <p>消費行動の変化と「産地への共感」が購買判断に与える影響を整理します。</p>
-            <a href="#" class="report-link">読む <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="report-card reveal reveal-delay-2">
-            <div class="report-tag">トレンド分析</div>
-            <h3>"共感されるブランド"と"信頼されるブランド"の違い</h3>
-            <p>話題性と信頼性は同義ではありません。その差を構造的に読み解きます。</p>
-            <a href="#" class="report-link">読む <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="report-card reveal">
-            <div class="report-tag">信頼設計</div>
-            <h3>信頼は、偶然ではなく設計される。</h3>
-            <p>信頼が積み重なる構造と、認証制度がその設計にどう関わるかを考察します。</p>
-            <a href="#" class="report-link">読む <i class="fas fa-arrow-right"></i></a>
-          </div>
-
-          <div class="report-card reveal reveal-delay-1">
-            <div class="report-tag">市場レポート</div>
-            <h3>小規模ブランドが評価される条件</h3>
-            <p>規模ではなく姿勢と設計が、信頼性を生む。その実例と構造を整理します。</p>
-            <a href="#" class="report-link">読む <i class="fas fa-arrow-right"></i></a>
-          </div>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">認証申請はこちら</a>
+          <a href="#directory" class="btn btn-secondary btn-secondary-light">認証商品を見る</a>
         </div>
       </div>
     </section>
-
-    <!-- ============================================================
-         FOR BUSINESS（経営者向け）
-    ============================================================ -->
-    <section class="section" id="for-business">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">For Business</span>
-          <h2 class="section-title">経営者・企業の方へ</h2>
-          <p class="section-subtitle">自社の価値を、社会に伝わる形へ。</p>
-        </div>
-
-        <div class="business-grid">
-          <div class="business-main reveal">
-            <p class="lead-text">
-              優れた商品やサービスであっても、その価値が正確に伝わるとは限りません。
-            </p>
-            <p>
-              iimono awardは、事業者の皆さまが積み重ねてきた品質、姿勢、背景を、第三者の視点から整理し、社会に届くかたちへ可視化することを目指しています。認証取得は目的ではなく、<strong>自社の価値を見つめ直し、説明責任を整え、信頼の土台を強くするプロセス</strong>でもあります。
-            </p>
-
-            <div class="business-merit">
-              <h3>認証取得によって期待できること</h3>
-              <ul>
-                <li><i class="fas fa-check-circle"></i> 自社の強みを第三者視点で整理できる</li>
-                <li><i class="fas fa-check-circle"></i> 情報発信の説得力を高められる</li>
-                <li><i class="fas fa-check-circle"></i> 商談・広報・採用など多面的な信頼形成に活用できる</li>
-                <li><i class="fas fa-check-circle"></i> 社内においても品質意識と説明意識を共有しやすくなる</li>
-              </ul>
-              <p class="merit-note">※認証は売上向上や成果を保証するものではありません。信頼形成の基盤を可視化する手段として位置づけています。</p>
-            </div>
-          </div>
-
-          <div class="business-cards reveal reveal-delay-1">
-            <div class="business-card">
-              <div class="biz-card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-              <h3>公開セミナー</h3>
-              <p>認証制度の考え方、評価基準の見方、情報開示のあり方などをテーマに、事業者向けのセミナーを開催しています。</p>
-              <a href="#contact" class="btn btn-sm btn-outline">セミナー情報を見る</a>
-            </div>
-            <div class="business-card">
-              <div class="biz-card-icon"><i class="fas fa-comments"></i></div>
-              <h3>価値整理・発信支援</h3>
-              <p>ブランド価値の棚卸し、商品情報の整理、信頼形成に必要な開示項目の設計を支援します。</p>
-              <p class="biz-card-note">※支援の利用有無が審査結果に影響することはありません。審査部門とは分離して運営します。</p>
-              <a href="#contact" class="btn btn-sm btn-outline">相談する</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         GOVERNANCE（ガバナンス・委員会）
-    ============================================================ -->
-    <section class="section section-alt" id="governance">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Governance</span>
-          <h2 class="section-title">ガバナンス・委員会</h2>
-          <p class="section-subtitle">認証制度の信頼は、運営体制によって支えられます。</p>
-        </div>
-
-        <p class="governance-intro reveal">
-          認証制度において重要なのは、何を評価するかだけではありません。誰が、どのような体制で、どのようなルールにもとづいて運営しているか。iimono awardでは、その基盤を明確に示すことが、信頼性の前提であると考えています。
-        </p>
-
-        <div class="governance-grid">
-          <div class="governance-block reveal">
-            <h3><i class="fas fa-users"></i> 評価委員会</h3>
-            <p>評価委員会は、各分野の知見を持つ有識者によって構成されます。品質、ブランド、流通、地域性、生活者視点など、多面的な観点から審議を行います。</p>
-            <div class="committee-members">
-              <div class="committee-member">
-                <div class="member-avatar"><i class="fas fa-user-circle"></i></div>
-                <div class="member-info">
-                  <span class="member-name">委員長（予定）</span>
-                  <span class="member-role">品質評価・消費者行動論</span>
-                </div>
-              </div>
-              <div class="committee-member">
-                <div class="member-avatar"><i class="fas fa-user-circle"></i></div>
-                <div class="member-info">
-                  <span class="member-name">委員（予定）</span>
-                  <span class="member-role">ブランドマネジメント</span>
-                </div>
-              </div>
-              <div class="committee-member">
-                <div class="member-avatar"><i class="fas fa-user-circle"></i></div>
-                <div class="member-info">
-                  <span class="member-name">委員（予定）</span>
-                  <span class="member-role">地域産業・流通</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="governance-block reveal reveal-delay-1">
-            <h3><i class="fas fa-sitemap"></i> 運営体制</h3>
-            <p>iimono awardでは、認証制度の公正な運営のため、役割ごとに体制を分けています。</p>
-            <div class="org-chart">
-              <div class="org-item org-top">最高顧問</div>
-              <div class="org-line"></div>
-              <div class="org-item org-main">評価委員会</div>
-              <div class="org-branches">
-                <div class="org-branch">
-                  <div class="org-item org-sub">審査部門</div>
-                </div>
-                <div class="org-branch">
-                  <div class="org-item org-sub">事務局</div>
-                </div>
-                <div class="org-branch">
-                  <div class="org-item org-sub">監督機能</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="governance-block governance-block-full reveal">
-            <h3><i class="fas fa-eye"></i> 透明性方針</h3>
-            <p class="policy-headline">見えない運営をしない。</p>
-            <p>iimono awardは、制度運営の透明性を重視し、以下の情報を可能な限り公開します。</p>
-            <div class="transparency-list">
-              <span><i class="fas fa-check"></i> 評価基準の概要</span>
-              <span><i class="fas fa-check"></i> 審査プロセス</span>
-              <span><i class="fas fa-check"></i> 委員会体制</span>
-              <span><i class="fas fa-check"></i> 利益相反ポリシー</span>
-              <span><i class="fas fa-check"></i> 更新制度</span>
-              <span><i class="fas fa-check"></i> 年次運営報告</span>
-              <span><i class="fas fa-check"></i> 制度改定履歴</span>
-            </div>
-            <blockquote class="governance-quote">
-              透明性は、説明の多さではなく、<strong>判断の根拠にアクセスできる状態</strong>によって担保されると考えています。
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         NEWS（ニュース・更新情報）
-    ============================================================ -->
-    <section class="section" id="news">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">News</span>
-          <h2 class="section-title">ニュース・更新情報</h2>
-          <p class="section-subtitle">制度の動きと、認証の現在地をお知らせします。</p>
-        </div>
-
-        <div class="news-list">
-          <article class="news-item reveal">
-            <div class="news-meta">
-              <time class="news-date">2026.03.15</time>
-              <span class="news-tag tag-cert">認証発表</span>
-            </div>
-            <h3 class="news-title"><a href="#">2026年度 第1回認証対象を公開しました</a></h3>
-            <p class="news-excerpt">今年度最初の認証として、食品・工芸・サービス・地域産品の各カテゴリーから合計5件の認証を決定しました。</p>
-          </article>
-          <article class="news-item reveal reveal-delay-1">
-            <div class="news-meta">
-              <time class="news-date">2026.02.28</time>
-              <span class="news-tag tag-report">レポート</span>
-            </div>
-            <h3 class="news-title"><a href="#">2025年度 年次レポートを公開しました</a></h3>
-            <p class="news-excerpt">認証件数・カテゴリー傾向・委員会活動報告・透明性方針の運用状況をまとめた年次レポートを公開します。</p>
-          </article>
-          <article class="news-item reveal reveal-delay-2">
-            <div class="news-meta">
-              <time class="news-date">2026.01.20</time>
-              <span class="news-tag tag-event">イベント</span>
-            </div>
-            <h3 class="news-title"><a href="#">「信頼設計セミナー」開催のお知らせ（2026年3月）</a></h3>
-            <p class="news-excerpt">事業者向け公開セミナーを開催します。認証制度の仕組みと、長く選ばれるための信頼設計の実務を共有します。</p>
-          </article>
-          <article class="news-item reveal">
-            <div class="news-meta">
-              <time class="news-date">2025.12.10</time>
-              <span class="news-tag tag-cert">認証発表</span>
-            </div>
-            <h3 class="news-title"><a href="#">2025年度 受賞対象を発表しました</a></h3>
-            <p class="news-excerpt">認証対象のなかでも特に象徴的な取り組みが見られた事例について、年度受賞を発表します。</p>
-          </article>
-        </div>
-
-        <div class="news-more reveal">
-          <a href="#" class="btn btn-outline">ニュース一覧へ</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         TRUST BANNER
-    ============================================================ -->
-    <section class="trust-banner">
-      <div class="container">
-        <div class="trust-banner-inner reveal">
-          <p class="trust-banner-copy">誠実につくられたものが、誠実に選ばれる市場へ。</p>
-          <p class="trust-banner-sub">生活者にとっての安心と、生産者にとっての正当な評価。その両立が、制度設計の出発点です。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         CONTACT（お問い合わせ）
-    ============================================================ -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Contact</span>
-          <h2 class="section-title">お問い合わせ</h2>
-          <p class="section-subtitle">制度に関するご質問・認証申請のご相談はこちらから</p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-            <div class="contact-info-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h3>メールでのお問い合わせ</h3>
-                <p>info@iimono-award.jp<br />
-                <span class="contact-note">※返信まで5営業日を目安としています</span></p>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <i class="fas fa-file-signature"></i>
-              <div>
-                <h3>認証申請をご検討の方</h3>
-                <p>まずはお気軽にご相談ください。制度の詳細と申請手順をご案内します。</p>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <i class="fas fa-camera"></i>
-              <div>
-                <h3>取材・連携のお問い合わせ</h3>
-                <p>メディア取材、業務提携、講演依頼等も上記メールアドレスまでご連絡ください。</p>
-              </div>
-            </div>
-          </div>
-
-          <form class="contact-form reveal reveal-delay-1" id="contact-form" novalidate>
-            <div class="form-group">
-              <label for="contact-name">お名前 <span class="required">必須</span></label>
-              <input type="text" id="contact-name" name="name" placeholder="山田 太郎" required />
-            </div>
-            <div class="form-group">
-              <label for="contact-company">会社名・団体名</label>
-              <input type="text" id="contact-company" name="company" placeholder="株式会社 ○○" />
-            </div>
-            <div class="form-group">
-              <label for="contact-email">メールアドレス <span class="required">必須</span></label>
-              <input type="email" id="contact-email" name="email" placeholder="example@mail.jp" required />
-            </div>
-            <div class="form-group">
-              <label for="contact-type">お問い合わせ種別 <span class="required">必須</span></label>
-              <select id="contact-type" name="type" required>
-                <option value="">選択してください</option>
-                <option value="cert">認証申請について</option>
-                <option value="system">制度内容について</option>
-                <option value="seminar">セミナーについて</option>
-                <option value="media">取材・連携について</option>
-                <option value="other">その他</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="contact-message">お問い合わせ内容 <span class="required">必須</span></label>
-              <textarea id="contact-message" name="message" rows="5" placeholder="お問い合わせ内容をご記入ください" required></textarea>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" id="contact-agree" name="agree" required />
-              <label for="contact-agree">
-                <a href="#" class="form-link">プライバシーポリシー</a>に同意します
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">送信する</button>
-            <div class="form-success" id="form-success" style="display:none;">
-              <i class="fas fa-check-circle"></i>
-              <p>お問い合わせを受け付けました。<br />担当者よりご連絡いたします。</p>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer id="site-footer">
-    <div class="footer-inner container">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <span class="logo-en">iimono award</span>
-            <span class="logo-jp">認証機関</span>
-          </div>
-          <p class="footer-tagline">いいモノの価値を、誠実に見極め、社会へひらく。</p>
-          <p class="footer-desc">そのために、透明で中立的な認証制度を運営しています。</p>
-        </div>
-
-        <div class="footer-nav-group">
-          <h4>制度について</h4>
-          <ul>
-            <li><a href="#philosophy">私たちについて</a></li>
-            <li><a href="#certification">認証制度</a></li>
-            <li><a href="#governance">ガバナンス</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-nav-group">
-          <h4>活動・発信</h4>
-          <ul>
-            <li><a href="#directory">認証一覧</a></li>
-            <li><a href="#report">レポート・インサイト</a></li>
-            <li><a href="#news">ニュース</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-nav-group">
-          <h4>企業・生産者の方へ</h4>
-          <ul>
-            <li><a href="#for-business">認証を目指す方へ</a></li>
-            <li><a href="#for-business">セミナー案内</a></li>
-            <li><a href="#contact">相談・申請</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-legal">
-          <a href="#">利用規約</a>
-          <a href="#">ロゴ利用規定</a>
-          <a href="#">プライバシーポリシー</a>
-          <a href="#">免責事項</a>
-          <a href="#contact">お問い合わせ</a>
-        </div>
-        <div class="footer-disclaimer">
-          <p>※認証情報は認証時点の審査結果にもとづくものであり、品質・効果・継続提供を将来にわたり保証するものではありません。</p>
-        </div>
-        <p class="footer-copy">&copy; 2026 iimono award. All rights reserved.</p>
-      </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">iimono award</div>
+      <div class="footer-copy">© 2026 iimono award. All Rights Reserved.</div>
     </div>
   </footer>
-
-  <!-- Back to top -->
-  <button class="back-to-top" id="back-to-top" aria-label="ページトップへ戻る">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
