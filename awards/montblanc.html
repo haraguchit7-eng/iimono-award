@@ -6,336 +6,76 @@
   <title>モンブラン | iimono award</title>
   <link rel="stylesheet" href="../style.css" />
   <style>
-    body {
-      background: #faf9f7;
-    }
-
-    .product-detail-page {
-      padding-top: 110px;
-      padding-bottom: 80px;
-    }
-
-    .product-detail-wrap {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-bottom: 28px;
-      color: #1a2e44;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
-    }
-
+    body { background: #faf9f7; }
+    .product-detail-page { padding-top: 110px; padding-bottom: 80px; }
+    .product-detail-wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .back-link { display: inline-block; margin-bottom: 28px; color: #1a2e44; text-decoration: none; font-size: 0.95rem; }
+    .back-link:hover { text-decoration: underline; }
     .hero-card {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 48px;
-      align-items: center;
-      background: #fff;
-      border: 1px solid #e0dbd0;
-      padding: 40px;
-      box-shadow: 0 4px 24px rgba(26,46,68,0.08);
-      margin-bottom: 40px;
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
+      background: #fff; border: 1px solid #e0dbd0; padding: 40px;
+      box-shadow: 0 4px 24px rgba(26,46,68,0.08); margin-bottom: 40px;
     }
-
     .hero-image {
-      width: 100%;
-      border: 1px solid #e0dbd0;
-      background: linear-gradient(135deg, #f3ede5, #e6dbcd);
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 2rem;
-      letter-spacing: 0.08em;
-      color: #8b7355;
+      width: 100%; height: 520px; object-fit: cover; border: 1px solid #e0dbd0;
+      display: block; background: #f7f3ed;
     }
-
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      color: #8b7355;
-      margin-bottom: 14px;
-    }
-
+    .eyebrow { display: inline-block; font-size: 0.78rem; letter-spacing: 0.18em; color: #8b7355; margin-bottom: 14px; }
     .product-title {
-      font-family: "Noto Serif JP", serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.35;
-      color: #1a2e44;
-      margin-bottom: 18px;
-      font-weight: 600;
+      font-family: "Noto Serif JP", serif; font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.35; color: #1a2e44; margin-bottom: 18px; font-weight: 600;
     }
-
-    .product-sub {
-      font-size: 1rem;
-      color: #6b6b6b;
-      line-height: 1.9;
-      margin-bottom: 28px;
-    }
-
-    .meta-list {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
+    .product-sub { font-size: 1rem; color: #6b6b6b; line-height: 1.9; margin-bottom: 28px; }
+    .meta-list { display: grid; gap: 12px; margin-bottom: 28px; }
     .meta-item {
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 12px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #eee6da;
-      font-size: 0.96rem;
+      display: grid; grid-template-columns: 110px 1fr; gap: 12px;
+      padding-bottom: 12px; border-bottom: 1px solid #eee6da; font-size: 0.96rem;
     }
-
-    .meta-label {
-      color: #8b7355;
-      font-weight: 700;
-    }
-
-    .meta-value {
-      color: #2c2c2c;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
+    .meta-label { color: #8b7355; font-weight: 700; }
+    .meta-value { color: #2c2c2c; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
     .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 24px;
-      border: 1px solid #1a2e44;
-      text-decoration: none;
-      font-size: 0.92rem;
-      letter-spacing: 0.04em;
-      transition: all 0.3s ease;
+      display: inline-flex; align-items: center; justify-content: center; padding: 13px 24px;
+      border: 1px solid #1a2e44; text-decoration: none; font-size: 0.92rem;
+      letter-spacing: 0.04em; transition: all 0.3s ease;
     }
-
-    .cta-btn.primary {
-      background: #1a2e44;
-      color: #fff;
-    }
-
-    .cta-btn.primary:hover {
-      background: #0f1e2e;
-      border-color: #0f1e2e;
-    }
-
-    .cta-btn.secondary {
-      color: #1a2e44;
-      background: transparent;
-    }
-
-    .cta-btn.secondary:hover {
-      background: #1a2e44;
-      color: #fff;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 32px;
-      align-items: start;
-    }
-
-    .content-main {
-      display: grid;
-      gap: 28px;
-    }
-
+    .cta-btn.primary { background: #1a2e44; color: #fff; }
+    .cta-btn.primary:hover { background: #0f1e2e; border-color: #0f1e2e; }
+    .cta-btn.secondary { color: #1a2e44; background: transparent; }
+    .cta-btn.secondary:hover { background: #1a2e44; color: #fff; }
+    .content-grid { display: grid; grid-template-columns: 1fr 360px; gap: 32px; align-items: start; }
+    .content-main { display: grid; gap: 28px; }
     .content-card {
-      background: #fff;
-      border: 1px solid #e0dbd0;
-      padding: 32px;
+      background: #fff; border: 1px solid #e0dbd0; padding: 32px;
       box-shadow: 0 2px 10px rgba(26,46,68,0.04);
     }
-
     .section-title-local {
-      font-family: "Noto Serif JP", serif;
-      font-size: 1.45rem;
-      color: #1a2e44;
-      margin-bottom: 18px;
-      line-height: 1.5;
+      font-family: "Noto Serif JP", serif; font-size: 1.45rem; color: #1a2e44;
+      margin-bottom: 18px; line-height: 1.5;
     }
-
-    .lead-copy {
-      font-size: 1.06rem;
-      line-height: 2;
-      color: #2c2c2c;
-      margin-bottom: 16px;
-    }
-
-    .normal-copy {
-      font-size: 0.97rem;
-      line-height: 2;
-      color: #555;
-    }
-
-    .reason-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 10px;
-    }
-
-    .reason-item {
-      border-left: 3px solid #c8a96e;
-      background: #fcfaf6;
-      padding: 14px 16px;
-    }
-
-    .reason-item strong {
-      display: block;
-      margin-bottom: 6px;
-      color: #1a2e44;
-      font-size: 0.98rem;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-top: 12px;
-    }
-
-    .gallery-box {
-      min-height: 180px;
-      border: 1px solid #e0dbd0;
-      background: linear-gradient(135deg, #f3ede5, #e6dbcd);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #8b7355;
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-    }
-
-    .sidebar {
-      display: grid;
-      gap: 24px;
-      position: sticky;
-      top: 96px;
-    }
-
+    .lead-copy { font-size: 1.06rem; line-height: 2; color: #2c2c2c; margin-bottom: 16px; }
+    .normal-copy { font-size: 0.97rem; line-height: 2; color: #555; }
+    .reason-list { display: grid; gap: 14px; margin-top: 10px; }
+    .reason-item { border-left: 3px solid #c8a96e; background: #fcfaf6; padding: 14px 16px; }
+    .reason-item strong { display: block; margin-bottom: 6px; color: #1a2e44; font-size: 0.98rem; }
+    .sidebar { display: grid; gap: 24px; position: sticky; top: 96px; }
     .sidebar-card {
-      background: #fff;
-      border: 1px solid #e0dbd0;
-      padding: 24px;
+      background: #fff; border: 1px solid #e0dbd0; padding: 24px;
       box-shadow: 0 2px 10px rgba(26,46,68,0.04);
     }
-
-    .sidebar-title {
-      font-family: "Noto Serif JP", serif;
-      font-size: 1.08rem;
-      color: #1a2e44;
-      margin-bottom: 14px;
-    }
-
-    .mini-list {
-      display: grid;
-      gap: 12px;
-      font-size: 0.94rem;
-      color: #555;
-      line-height: 1.8;
-    }
-
-    .price-big {
-      font-family: "Noto Serif JP", serif;
-      font-size: 1.8rem;
-      color: #1a2e44;
-      margin-bottom: 6px;
-    }
-
-    .small-note {
-      font-size: 0.82rem;
-      color: #888;
-      line-height: 1.7;
-    }
-
-    .maker-block {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 18px;
-      align-items: start;
-      margin-top: 10px;
-    }
-
-    .maker-photo {
-      width: 100%;
-      min-height: 140px;
-      border: 1px solid #e0dbd0;
-      background: linear-gradient(135deg, #f3ede5, #e6dbcd);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #8b7355;
-      font-size: 0.85rem;
-      text-align: center;
-      padding: 12px;
-    }
-
-    .maker-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #1a2e44;
-      margin-bottom: 10px;
-    }
-
+    .sidebar-title { font-family: "Noto Serif JP", serif; font-size: 1.08rem; color: #1a2e44; margin-bottom: 14px; }
+    .mini-list { display: grid; gap: 12px; font-size: 0.94rem; color: #555; line-height: 1.8; }
+    .price-big { font-family: "Noto Serif JP", serif; font-size: 1.8rem; color: #1a2e44; margin-bottom: 6px; }
+    .small-note { font-size: 0.82rem; color: #888; line-height: 1.7; }
     @media (max-width: 960px) {
-      .hero-card {
-        grid-template-columns: 1fr;
-      }
-
-      .content-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        position: static;
-      }
+      .hero-card, .content-grid { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
     }
-
     @media (max-width: 640px) {
-      .product-detail-page {
-        padding-top: 90px;
-      }
-
-      .hero-card,
-      .content-card,
-      .sidebar-card {
-        padding: 22px;
-      }
-
-      .hero-image {
-        min-height: 320px;
-        font-size: 1.5rem;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .maker-block {
-        grid-template-columns: 1fr;
-      }
-
-      .meta-item {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
+      .product-detail-page { padding-top: 90px; }
+      .hero-card, .content-card, .sidebar-card { padding: 22px; }
+      .hero-image { height: 320px; }
+      .meta-item { grid-template-columns: 1fr; gap: 4px; }
     }
   </style>
 </head>
@@ -345,9 +85,7 @@
       <a href="../index.html#directory" class="back-link">← 認証一覧へ戻る</a>
 
       <section class="hero-card">
-        <div class="hero-image">
-          MONT BLANC IMAGE
-        </div>
+        <img src="../images/montblanc-main.jpg" alt="モンブラン" class="hero-image" />
 
         <div class="hero-copy">
           <span class="eyebrow">2026 FIRST HALF / CAKE CATEGORY</span>
@@ -358,18 +96,9 @@
           </p>
 
           <div class="meta-list">
-            <div class="meta-item">
-              <div class="meta-label">価格</div>
-              <div class="meta-value">680円（1個）</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">販売元</div>
-              <div class="meta-value">いいモノ cafe</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">部門</div>
-              <div class="meta-value">2026年上半期 / ケーキ部門</div>
-            </div>
+            <div class="meta-item"><div class="meta-label">価格</div><div class="meta-value">680円（1個）</div></div>
+            <div class="meta-item"><div class="meta-label">販売元</div><div class="meta-value">いいモノ cafe</div></div>
+            <div class="meta-item"><div class="meta-label">部門</div><div class="meta-value">2026年上半期 / ケーキ部門</div></div>
           </div>
 
           <div class="cta-row">
@@ -381,7 +110,6 @@
 
       <section class="content-grid">
         <div class="content-main">
-
           <div class="content-card">
             <h2 class="section-title-local">この商品の魅力</h2>
             <p class="lead-copy">
@@ -397,49 +125,12 @@
           <div class="content-card">
             <h2 class="section-title-local">iimono award 認証理由</h2>
             <div class="reason-list">
-              <div class="reason-item">
-                <strong>1. 見た目の存在感</strong>
-                一目で印象に残る立体的なフォルムと、栗の魅力を前面に出した造形が高く評価されました。
-              </div>
-              <div class="reason-item">
-                <strong>2. 栗の風味表現</strong>
-                モンブランとしての王道感を持ちながら、素材の風味をしっかり感じさせる設計が魅力です。
-              </div>
-              <div class="reason-item">
-                <strong>3. 満足感と軽やかさの両立</strong>
-                見た目の重厚感に対して、食べ心地は重すぎず、最後まで心地よく楽しめる構成になっています。
-              </div>
-              <div class="reason-item">
-                <strong>4. 価格との価値バランス</strong>
-                680円という価格帯で、特別感・完成度・満足度が高い水準でまとまっている点が認証理由です。
-              </div>
+              <div class="reason-item"><strong>1. 見た目の存在感</strong>一目で印象に残る立体的なフォルムと、栗の魅力を前面に出した造形が高く評価されました。</div>
+              <div class="reason-item"><strong>2. 栗の風味表現</strong>モンブランとしての王道感を持ちながら、素材の風味をしっかり感じさせる設計が魅力です。</div>
+              <div class="reason-item"><strong>3. 満足感と軽やかさの両立</strong>見た目の重厚感に対して、食べ心地は重すぎず、最後まで心地よく楽しめる構成になっています。</div>
+              <div class="reason-item"><strong>4. 価格との価値バランス</strong>680円という価格帯で、特別感・完成度・満足度が高い水準でまとまっている点が認証理由です。</div>
             </div>
           </div>
-
-          <div class="content-card">
-            <h2 class="section-title-local">商品ギャラリー</h2>
-            <div class="gallery-grid">
-              <div class="gallery-box">SUB IMAGE 1</div>
-              <div class="gallery-box">SUB IMAGE 2</div>
-              <div class="gallery-box">SUB IMAGE 3</div>
-              <div class="gallery-box">SUB IMAGE 4</div>
-            </div>
-          </div>
-
-          <div class="content-card">
-            <h2 class="section-title-local">作り手について</h2>
-            <div class="maker-block">
-              <div class="maker-photo">PATISSIER PHOTO</div>
-              <div>
-                <div class="maker-name">いいモノ cafe パティシエ</div>
-                <p class="normal-copy">
-                  素材の魅力を端正に引き出す洋菓子づくりを得意とし、見た目の美しさと味わいの奥行きを両立する商品設計を大切にしている作り手です。
-                  特にモンブランでは、栗の風味を主役にしながら、全体の食感と余韻まで丁寧に整えることを重視しています。
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <aside class="sidebar">
