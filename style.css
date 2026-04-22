@@ -2102,3 +2102,9 @@ ul, ol { list-style: none; }
     font-size: 1.6rem;
   }
 }
+.award-image-placeholder img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
