@@ -6,163 +6,486 @@
   <title>3種のベリーのオペラ | iimono award</title>
   <link rel="stylesheet" href="../style.css" />
   <style>
-    body { background: #faf9f7; }
-    .product-detail-page { padding-top: 110px; padding-bottom: 80px; }
-    .product-detail-wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
-    .back-link { display: inline-block; margin-bottom: 28px; color: #1a2e44; text-decoration: none; font-size: 0.95rem; }
-    .back-link:hover { text-decoration: underline; }
-    .hero-card {
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
-      background: #fff; border: 1px solid #e0dbd0; padding: 40px;
-      box-shadow: 0 4px 24px rgba(26,46,68,0.08); margin-bottom: 40px;
+    body {
+      background: #f7f5f1;
+      color: #2c2c2c;
     }
-    .hero-image {
-      width: 100%; height: 520px; object-fit: cover; border: 1px solid #e0dbd0;
-      display: block; background: #f7f3ed;
+
+    .product-detail-page {
+      padding-top: 110px;
+      padding-bottom: 90px;
     }
-    .eyebrow { display: inline-block; font-size: 0.78rem; letter-spacing: 0.18em; color: #8b7355; margin-bottom: 14px; }
+
+    .product-detail-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .back-link-top {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: #1a2e44;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .back-link-top:hover {
+      text-decoration: underline;
+    }
+
+    .hero-section {
+      background: #fbfaf7;
+      border: 1px solid #ddd5c8;
+      padding: 34px;
+      margin-bottom: 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .hero-visual {
+      background: #ece7de;
+      border: 1px solid #d9d1c4;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 22px;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      color: #9b7e57;
+    }
+
     .product-title {
-      font-family: "Noto Serif JP", serif; font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.35; color: #1a2e44; margin-bottom: 18px; font-weight: 600;
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      line-height: 1.3;
+      color: #20354d;
+      margin-bottom: 28px;
+      font-weight: 600;
     }
-    .product-sub { font-size: 1rem; color: #6b6b6b; line-height: 1.9; margin-bottom: 28px; }
-    .meta-list { display: grid; gap: 12px; margin-bottom: 28px; }
-    .meta-item {
-      display: grid; grid-template-columns: 110px 1fr; gap: 12px;
-      padding-bottom: 12px; border-bottom: 1px solid #eee6da; font-size: 0.96rem;
+
+    .product-lead {
+      font-size: 1.05rem;
+      line-height: 1.95;
+      color: #6b6b6b;
+      margin-bottom: 30px;
     }
-    .meta-label { color: #8b7355; font-weight: 700; }
-    .meta-value { color: #2c2c2c; }
-    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .meta-table {
+      border-top: 1px solid #ddd5c8;
+      margin-bottom: 30px;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid #ddd5c8;
+      align-items: center;
+    }
+
+    .meta-label {
+      font-weight: 700;
+      color: #8b7355;
+      font-size: 0.98rem;
+    }
+
+    .meta-value {
+      font-size: 0.98rem;
+      color: #2f2f2f;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
     .cta-btn {
-      display: inline-flex; align-items: center; justify-content: center; padding: 13px 24px;
-      border: 1px solid #1a2e44; text-decoration: none; font-size: 0.92rem;
-      letter-spacing: 0.04em; transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 220px;
+      padding: 18px 28px;
+      border: 1px solid #1a2e44;
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      transition: all 0.3s ease;
     }
-    .cta-btn.primary { background: #1a2e44; color: #fff; }
-    .cta-btn.primary:hover { background: #0f1e2e; border-color: #0f1e2e; }
-    .cta-btn.secondary { color: #1a2e44; background: transparent; }
-    .cta-btn.secondary:hover { background: #1a2e44; color: #fff; }
-    .content-grid { display: grid; grid-template-columns: 1fr 360px; gap: 32px; align-items: start; }
-    .content-main { display: grid; gap: 28px; }
+
+    .cta-btn.primary {
+      background: #1a2e44;
+      color: #fff;
+    }
+
+    .cta-btn.primary:hover {
+      background: #112234;
+      border-color: #112234;
+    }
+
+    .cta-btn.secondary {
+      background: transparent;
+      color: #1a2e44;
+    }
+
+    .cta-btn.secondary:hover {
+      background: #1a2e44;
+      color: #fff;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+
     .content-card {
-      background: #fff; border: 1px solid #e0dbd0; padding: 32px;
+      background: #fff;
+      border: 1px solid #e3dbce;
+      padding: 30px;
       box-shadow: 0 2px 10px rgba(26,46,68,0.04);
     }
+
+    .content-card.full {
+      grid-column: 1 / -1;
+    }
+
     .section-title-local {
-      font-family: "Noto Serif JP", serif; font-size: 1.45rem; color: #1a2e44;
-      margin-bottom: 18px; line-height: 1.5;
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.45rem;
+      color: #1a2e44;
+      margin-bottom: 18px;
+      line-height: 1.5;
+      font-weight: 600;
     }
-    .lead-copy { font-size: 1.06rem; line-height: 2; color: #2c2c2c; margin-bottom: 16px; }
-    .normal-copy { font-size: 0.97rem; line-height: 2; color: #555; }
-    .reason-list { display: grid; gap: 14px; margin-top: 10px; }
-    .reason-item { border-left: 3px solid #c8a96e; background: #fcfaf6; padding: 14px 16px; }
-    .reason-item strong { display: block; margin-bottom: 6px; color: #1a2e44; font-size: 0.98rem; }
-    .sidebar { display: grid; gap: 24px; position: sticky; top: 96px; }
-    .sidebar-card {
-      background: #fff; border: 1px solid #e0dbd0; padding: 24px;
-      box-shadow: 0 2px 10px rgba(26,46,68,0.04);
+
+    .lead-copy {
+      font-size: 1.05rem;
+      line-height: 2;
+      color: #333;
+      margin-bottom: 16px;
     }
-    .sidebar-title { font-family: "Noto Serif JP", serif; font-size: 1.08rem; color: #1a2e44; margin-bottom: 14px; }
-    .mini-list { display: grid; gap: 12px; font-size: 0.94rem; color: #555; line-height: 1.8; }
-    .price-big { font-family: "Noto Serif JP", serif; font-size: 1.8rem; color: #1a2e44; margin-bottom: 6px; }
-    .small-note { font-size: 0.82rem; color: #888; line-height: 1.7; }
-    @media (max-width: 960px) {
-      .hero-card, .content-grid { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
+
+    .normal-copy {
+      font-size: 0.97rem;
+      line-height: 2;
+      color: #555;
     }
-    @media (max-width: 640px) {
-      .product-detail-page { padding-top: 90px; }
-      .hero-card, .content-card, .sidebar-card { padding: 22px; }
-      .hero-image { height: 320px; }
-      .meta-item { grid-template-columns: 1fr; gap: 4px; }
+
+    .reason-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .reason-item {
+      background: #fcfaf6;
+      border-left: 3px solid #c8a96e;
+      padding: 14px 16px;
+    }
+
+    .reason-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #1a2e44;
+      font-size: 0.98rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .gallery-item {
+      background: #ece7de;
+      border: 1px solid #ddd5c8;
+      min-height: 180px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-placeholder {
+      color: #8b7355;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+    }
+
+    .maker-block {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 8px;
+    }
+
+    .maker-photo-wrap {
+      background: #ece7de;
+      border: 1px solid #ddd5c8;
+      min-height: 240px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .maker-photo-wrap img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .maker-photo-placeholder {
+      color: #8b7355;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .maker-name {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #1a2e44;
+      margin-bottom: 12px;
+    }
+
+    .maker-career {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid #e7dfd3;
+    }
+
+    .maker-career strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #8b7355;
+      font-size: 0.95rem;
+    }
+
+    .maker-points {
+      margin-top: 14px;
+      display: grid;
+      gap: 8px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .note-box {
+      background: #fff;
+      border: 1px solid #e3dbce;
+      padding: 24px 28px;
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.9;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .product-detail-page {
+        padding-top: 90px;
+      }
+
+      .hero-section,
+      .content-card,
+      .note-box {
+        padding: 22px;
+      }
+
+      .hero-visual,
+      .hero-visual img {
+        min-height: 320px;
+        height: 320px;
+      }
+
+      .product-title {
+        font-size: 2.3rem;
+      }
+
+      .meta-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .maker-block {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <main class="product-detail-page">
     <div class="product-detail-wrap">
-      <a href="../index.html#directory" class="back-link">← 認証一覧へ戻る</a>
+      <a href="../index.html#directory" class="back-link-top">← 認証一覧へ戻る</a>
 
-      <section class="hero-card">
-        <img src="../images/opera-main.jpg" alt="3種のベリーのオペラ" class="hero-image" />
+      <section class="hero-section">
+        <div class="hero-grid">
+          <div class="hero-visual">
+            <img src="../images/opera-main.jpg" alt="3種のベリーのオペラ" />
+          </div>
 
-        <div class="hero-copy">
-          <span class="eyebrow">2026 FIRST HALF / CAKE CATEGORY</span>
-          <h1 class="product-title">3種のベリーのオペラ</h1>
-          <p class="product-sub">
-            艶やかなチョコレートの表面と、整然と重なる美しい層が印象的なオペラ。
-            濃厚さの中にベリーの香りと余韻が重なり合う、上質で大人びた一品です。
+          <div class="hero-copy">
+            <span class="eyebrow">2026 FIRST HALF / CAKE CATEGORY</span>
+            <h1 class="product-title">3種のベリーのオペラ</h1>
+            <p class="product-lead">
+              艶やかなチョコレートの表面と、整然と重なる美しい層が印象的なオペラ。
+              濃厚さの中にベリーの香りと余韻が重なり合う、上質で大人びた一品です。
+            </p>
+
+            <div class="meta-table">
+              <div class="meta-row">
+                <div class="meta-label">価格</div>
+                <div class="meta-value">500円（1個）</div>
+              </div>
+              <div class="meta-row">
+                <div class="meta-label">販売元</div>
+                <div class="meta-value">パティスリーいいモノ</div>
+              </div>
+              <div class="meta-row">
+                <div class="meta-label">部門</div>
+                <div class="meta-value">2026年上半期 / ケーキ部門</div>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a href="#" class="cta-btn primary">購入・店舗情報を見る</a>
+              <a href="../index.html#directory" class="cta-btn secondary">一覧へ戻る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-grid">
+        <div class="content-card">
+          <h2 class="section-title-local">この商品の魅力</h2>
+          <p class="lead-copy">
+            コーヒー風味のバタークリームにこだわり、濃厚でありながら重すぎない味わいに仕上げられたオペラです。
+            表面のチョコレートは艶やかで美しく、見た瞬間に「特別な一品」と感じさせる品格があります。
           </p>
-
-          <div class="meta-list">
-            <div class="meta-item"><div class="meta-label">価格</div><div class="meta-value">500円（1個）</div></div>
-            <div class="meta-item"><div class="meta-label">販売元</div><div class="meta-value">パティスリーいいモノ</div></div>
-            <div class="meta-item"><div class="meta-label">部門</div><div class="meta-value">2026年上半期 / ケーキ部門</div></div>
-          </div>
-
-          <div class="cta-row">
-            <a href="#" class="cta-btn primary">購入・店舗情報を見る</a>
-            <a href="../index.html#directory" class="cta-btn secondary">一覧へ戻る</a>
-          </div>
+          <p class="normal-copy">
+            さらに、3種類のベリーがアクセントとして効いており、チョコレートの深みと香りの余韻をより印象的に引き立てています。
+            500円という価格からは想像しにくいほど、構成・見た目・満足感のバランスが優れた商品です。
+          </p>
         </div>
-      </section>
 
-      <section class="content-grid">
-        <div class="content-main">
-          <div class="content-card">
-            <h2 class="section-title-local">この商品の魅力</h2>
-            <p class="lead-copy">
-              コーヒー風味のバタークリームにこだわり、濃厚でありながら重すぎない味わいに仕上げられたオペラです。
-              表面のチョコレートは艶やかで美しく、見た瞬間に「特別な一品」と感じさせる品格があります。
-            </p>
-            <p class="normal-copy">
-              さらに、3種類のベリーがアクセントとして効いており、チョコレートの深みと香りの余韻をより印象的に引き立てています。
-              500円という価格からは想像しにくいほど、構成・見た目・満足感のバランスが優れた商品です。
-            </p>
-          </div>
-
-          <div class="content-card">
-            <h2 class="section-title-local">iimono award 認証理由</h2>
-            <div class="reason-list">
-              <div class="reason-item"><strong>1. 見た目の高級感</strong>艶のあるチョコレート表面と整った層構造が、価格以上の特別感を生み出しています。</div>
-              <div class="reason-item"><strong>2. 味の設計力</strong>コーヒー風味のバタークリーム、チョコレート、ベリーの組み合わせが完成度高くまとまっています。</div>
-              <div class="reason-item"><strong>3. 大人向けの商品性</strong>甘さを抑えた設計と余韻のある味わいにより、大人の満足度が高い商品として評価されました。</div>
-              <div class="reason-item"><strong>4. 価格との価値バランス</strong>500円という価格帯で、ここまでの見た目・味・印象価値を備えている点が認証理由です。</div>
+        <div class="content-card">
+          <h2 class="section-title-local">iimono award 認証理由</h2>
+          <div class="reason-list">
+            <div class="reason-item">
+              <strong>1. 見た目の高級感</strong>
+              艶のあるチョコレート表面と整った層構造が、価格以上の特別感を生み出しています。
+            </div>
+            <div class="reason-item">
+              <strong>2. 味の設計力</strong>
+              コーヒー風味のバタークリーム、チョコレート、ベリーの組み合わせが完成度高くまとまっています。
+            </div>
+            <div class="reason-item">
+              <strong>3. 大人向けの商品性</strong>
+              甘さを抑えた設計と余韻のある味わいにより、大人の満足度が高い商品として評価されました。
+            </div>
+            <div class="reason-item">
+              <strong>4. 価格との価値バランス</strong>
+              500円という価格帯で、ここまでの見た目・味・印象価値を備えている点が認証理由です。
             </div>
           </div>
         </div>
 
-        <aside class="sidebar">
-          <div class="sidebar-card">
-            <div class="sidebar-title">商品情報</div>
-            <div class="price-big">500円</div>
-            <div class="mini-list">
-              <div>内容：1個</div>
-              <div>販売元：パティスリーいいモノ</div>
-              <div>カテゴリ：ケーキ</div>
-              <div>認証時期：2026年上半期</div>
+        <div class="content-card full">
+          <h2 class="section-title-local">商品ギャラリー</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 1</div></div>
+            <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 2</div></div>
+            <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 3</div></div>
+            <div class="gallery-item"><div class="gallery-placeholder">SUB IMAGE 4</div></div>
+          </div>
+        </div>
+
+        <div class="content-card full">
+          <h2 class="section-title-local">このお菓子を作った人</h2>
+          <div class="maker-block">
+            <div class="maker-photo-wrap">
+              <div class="maker-photo-placeholder">PATISSIER PHOTO</div>
+            </div>
+
+            <div>
+              <div class="maker-name">パティスリーいいモノ パティシエ</div>
+              <p class="normal-copy">
+                細部の完成度と味の設計美を大切にし、見た目の美しさだけで終わらない洋菓子づくりを追求している作り手です。
+                オペラでは、層の美しさ、チョコレートの艶、香りの余韻まで含めて一つの体験になるよう丁寧に構成されています。
+              </p>
+
+              <div class="maker-career">
+                <strong>略歴</strong>
+                <p class="normal-copy">
+                  ここに100文字程度の略歴を入れられます。チョコレート菓子や層菓子へのこだわり、洋菓子づくりに携わってきた背景などを簡潔にまとめる想定です。
+                </p>
+              </div>
+
+              <div class="maker-points">
+                <div>・層構造の美しさと味の設計を得意とする</div>
+                <div>・大人向けの上質な洋菓子づくりを重視</div>
+                <div>・チョコレートと果実の余韻設計を大切にしている</div>
+              </div>
             </div>
           </div>
-
-          <div class="sidebar-card">
-            <div class="sidebar-title">おすすめシーン</div>
-            <div class="mini-list">
-              <div>・大人向けの手土産に</div>
-              <div>・自分へのご褒美に</div>
-              <div>・来客時のおもてなしに</div>
-              <div>・特別感のある差し入れに</div>
-            </div>
-          </div>
-
-          <div class="sidebar-card">
-            <div class="sidebar-title">備考</div>
-            <p class="small-note">
-              価格・内容は掲載時点の情報です。最新の販売状況や在庫、取り扱い内容は販売元へご確認ください。
-            </p>
-          </div>
-        </aside>
+        </div>
       </section>
+
+      <div class="note-box">
+        価格・内容は掲載時点の情報です。最新の販売状況や在庫、取り扱い内容は販売元へご確認ください。
+      </div>
     </div>
   </main>
 </body>
