@@ -1,512 +1,468 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>シュークリーム | iimono award</title>
-  <link rel="stylesheet" href="../style.css" />
-  <style>
-    body {
-      background: #f7f5f1;
-      color: #2c2c2c;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>シュークリーム | iimono award</title>
+<link rel="stylesheet" href="../style.css">
 
-    .product-detail-page {
-      padding-top: 110px;
-      padding-bottom: 90px;
-    }
+<style>
+body{
+  background:#f7f5f1;
+  color:#2c2c2c;
+}
 
-    .product-detail-wrap {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+.product-detail-page{
+  padding-top:100px;
+  padding-bottom:80px;
+}
 
-    .back-link-top {
-      display: inline-block;
-      margin-bottom: 24px;
-      color: #1a2e44;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
+.product-detail-wrap{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 24px;
+}
 
-    .back-link-top:hover {
-      text-decoration: underline;
-    }
+.back-link-top{
+  display:inline-block;
+  margin-bottom:28px;
+  color:#1a2e44;
+  text-decoration:none;
+  font-size:.95rem;
+}
 
-    .hero-section {
-      background: #fbfaf7;
-      border: 1px solid #ddd5c8;
-      padding: 34px;
-      margin-bottom: 36px;
-    }
+.back-link-top:hover{
+  text-decoration:underline;
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 56px;
-      align-items: center;
-    }
+/* hero */
+.hero-section{
+  background:#fbfaf7;
+  border:1px solid #ddd5c8;
+  padding:36px;
+  margin-bottom:34px;
+}
 
-    .hero-visual {
-      background: #ece7de;
-      border: 1px solid #d9d1c4;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:54px;
+  align-items:center;
+}
 
-    .hero-visual img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      display: block;
-    }
+.hero-visual{
+  border:1px solid #ddd5c8;
+  background:#ece7de;
+  overflow:hidden;
+}
 
-    .hero-visual-placeholder {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 2rem;
-      letter-spacing: 0.08em;
-      color: #8b7355;
-    }
+.hero-visual img{
+  width:100%;
+  height:560px;
+  object-fit:cover;
+  display:block;
+}
 
-    .hero-copy {
-      padding-right: 10px;
-    }
+.eyebrow{
+  display:inline-block;
+  margin-bottom:22px;
+  font-size:.82rem;
+  letter-spacing:.18em;
+  color:#9b7e57;
+}
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 22px;
-      font-size: 0.82rem;
-      letter-spacing: 0.18em;
-      color: #9b7e57;
-    }
+.product-title{
+  font-family:"Noto Serif JP",serif;
+  font-size:clamp(2.4rem,4vw,4.3rem);
+  line-height:1.3;
+  color:#20354d;
+  margin:0 0 24px;
+}
 
-    .product-title {
-      font-family: "Noto Serif JP", serif;
-      font-size: clamp(2.3rem, 4vw, 4rem);
-      line-height: 1.3;
-      color: #20354d;
-      margin-bottom: 28px;
-      font-weight: 600;
-    }
+.product-lead{
+  font-size:1.04rem;
+  line-height:2;
+  color:#666;
+  margin-bottom:28px;
+}
 
-    .product-lead {
-      font-size: 1.05rem;
-      line-height: 1.95;
-      color: #6b6b6b;
-      margin-bottom: 30px;
-    }
+.meta-table{
+  border-top:1px solid #ddd5c8;
+  margin-bottom:28px;
+}
 
-    .meta-table {
-      border-top: 1px solid #ddd5c8;
-      margin-bottom: 30px;
-    }
+.meta-row{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:16px;
+  padding:16px 0;
+  border-bottom:1px solid #ddd5c8;
+}
 
-    .meta-row {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 16px;
-      padding: 18px 0;
-      border-bottom: 1px solid #ddd5c8;
-      align-items: center;
-    }
+.meta-label{
+  font-weight:700;
+  color:#8b7355;
+}
 
-    .meta-label {
-      font-weight: 700;
-      color: #8b7355;
-      font-size: 0.98rem;
-    }
+.cta-row{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
 
-    .meta-value {
-      font-size: 0.98rem;
-      color: #2f2f2f;
-    }
+.cta-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:220px;
+  padding:17px 28px;
+  border:1px solid #1a2e44;
+  text-decoration:none;
+  transition:.3s;
+}
 
-    .cta-row {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+.cta-btn.primary{
+  background:#1a2e44;
+  color:#fff;
+}
 
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 220px;
-      padding: 18px 28px;
-      border: 1px solid #1a2e44;
-      text-decoration: none;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-      transition: all 0.3s ease;
-    }
+.cta-btn.primary:hover{
+  background:#112234;
+}
 
-    .cta-btn.primary {
-      background: #1a2e44;
-      color: #fff;
-    }
+.cta-btn.secondary{
+  color:#1a2e44;
+}
 
-    .cta-btn.primary:hover {
-      background: #112234;
-      border-color: #112234;
-    }
+.cta-btn.secondary:hover{
+  background:#1a2e44;
+  color:#fff;
+}
 
-    .cta-btn.secondary {
-      background: transparent;
-      color: #1a2e44;
-    }
+/* cards */
+.detail-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
 
-    .cta-btn.secondary:hover {
-      background: #1a2e44;
-      color: #fff;
-    }
+.content-card{
+  background:#fff;
+  border:1px solid #e3dbce;
+  padding:30px;
+  box-shadow:0 2px 10px rgba(26,46,68,.04);
+}
 
-    .detail-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-bottom: 28px;
-    }
+.content-card.full{
+  grid-column:1 / -1;
+}
 
-    .content-card {
-      background: #fff;
-      border: 1px solid #e3dbce;
-      padding: 30px;
-      box-shadow: 0 2px 10px rgba(26,46,68,0.04);
-    }
+.section-title-local{
+  font-family:"Noto Serif JP",serif;
+  font-size:1.45rem;
+  color:#1a2e44;
+  margin-bottom:18px;
+}
 
-    .content-card.full {
-      grid-column: 1 / -1;
-    }
+.lead-copy,
+.normal-copy{
+  line-height:2;
+  color:#555;
+}
 
-    .section-title-local {
-      font-family: "Noto Serif JP", serif;
-      font-size: 1.45rem;
-      color: #1a2e44;
-      margin-bottom: 18px;
-      line-height: 1.5;
-      font-weight: 600;
-    }
+.reason-list{
+  display:grid;
+  gap:14px;
+}
 
-    .lead-copy {
-      font-size: 1.05rem;
-      line-height: 2;
-      color: #333;
-      margin-bottom: 16px;
-    }
+.reason-item{
+  background:#fcfaf6;
+  border-left:3px solid #c8a96e;
+  padding:14px 16px;
+}
 
-    .normal-copy {
-      font-size: 0.97rem;
-      line-height: 2;
-      color: #555;
-    }
+.reason-item strong{
+  display:block;
+  margin-bottom:6px;
+  color:#1a2e44;
+}
 
-    .reason-list {
-      display: grid;
-      gap: 14px;
-    }
+/* gallery */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
 
-    .reason-item {
-      background: #fcfaf6;
-      border-left: 3px solid #c8a96e;
-      padding: 14px 16px;
-    }
+.gallery-item{
+  overflow:hidden;
+  border:1px solid #ddd5c8;
+  background:#ece7de;
+}
 
-    .reason-item strong {
-      display: block;
-      margin-bottom: 6px;
-      color: #1a2e44;
-      font-size: 0.98rem;
-    }
+.gallery-item img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+  transition:.4s;
+}
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 8px;
-    }
+.gallery-item:hover img{
+  transform:scale(1.05);
+}
 
-    .gallery-item {
-      background: #ece7de;
-      border: 1px solid #ddd5c8;
-      min-height: 180px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+/* maker */
+.maker-block{
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:28px;
+}
 
-    .gallery-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-    }
+.maker-photo-wrap{
+  overflow:hidden;
+  border:1px solid #ddd5c8;
+}
 
-    .gallery-placeholder {
-      color: #8b7355;
-      font-size: 0.9rem;
-      letter-spacing: 0.06em;
-    }
+.maker-photo-wrap img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  display:block;
+}
 
-    .maker-block {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 24px;
-      align-items: start;
-      margin-top: 8px;
-    }
+.maker-name{
+  font-size:1.1rem;
+  font-weight:700;
+  color:#1a2e44;
+  margin-bottom:12px;
+}
 
-    .maker-photo-wrap {
-      background: #ece7de;
-      border: 1px solid #ddd5c8;
-      min-height: 240px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.maker-career{
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px solid #e7dfd3;
+}
 
-    .maker-photo-wrap img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      display: block;
-    }
+.maker-points{
+  margin-top:16px;
+  display:grid;
+  gap:8px;
+}
 
-    .maker-photo-placeholder {
-      color: #8b7355;
-      font-size: 0.85rem;
-      letter-spacing: 0.06em;
-      text-align: center;
-      padding: 12px;
-    }
+.note-box{
+  margin-top:28px;
+  background:#fff;
+  border:1px solid #e3dbce;
+  padding:24px;
+  color:#666;
+  font-size:.92rem;
+}
 
-    .maker-name {
-      font-size: 1.08rem;
-      font-weight: 700;
-      color: #1a2e44;
-      margin-bottom: 12px;
-    }
+/* mobile */
+@media(max-width:1100px){
+.hero-grid,
+.detail-grid{
+grid-template-columns:1fr;
+}
 
-    .maker-career {
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid #e7dfd3;
-    }
+.gallery-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
 
-    .maker-career strong {
-      display: block;
-      margin-bottom: 8px;
-      color: #8b7355;
-      font-size: 0.95rem;
-    }
+@media(max-width:768px){
 
-    .maker-points {
-      margin-top: 14px;
-      display: grid;
-      gap: 8px;
-      color: #555;
-      font-size: 0.95rem;
-    }
+.product-detail-page{
+padding-top:88px;
+}
 
-    .note-box {
-      background: #fff;
-      border: 1px solid #e3dbce;
-      padding: 24px 28px;
-      color: #666;
-      font-size: 0.9rem;
-      line-height: 1.9;
-    }
+.hero-section,
+.content-card{
+padding:22px;
+}
 
-    @media (max-width: 1100px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
+.hero-visual img{
+height:340px;
+}
 
-      .detail-grid {
-        grid-template-columns: 1fr;
-      }
+.gallery-grid{
+grid-template-columns:1fr;
+}
 
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+.maker-block{
+grid-template-columns:1fr;
+}
 
-    @media (max-width: 768px) {
-      .product-detail-page {
-        padding-top: 90px;
-      }
+.cta-btn{
+width:100%;
+}
 
-      .hero-section,
-      .content-card,
-      .note-box {
-        padding: 22px;
-      }
-
-      .hero-visual,
-      .hero-visual img {
-        min-height: 320px;
-        height: 320px;
-      }
-
-      .product-title {
-        font-size: 2.3rem;
-      }
-
-      .meta-row {
-        grid-template-columns: 1fr;
-        gap: 6px;
-      }
-
-      .maker-block {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-btn {
-        width: 100%;
-      }
-    }
-  </style>
+.meta-row{
+grid-template-columns:1fr;
+gap:6px;
+}
+}
+</style>
 </head>
+
 <body>
-  <main class="product-detail-page">
-    <div class="product-detail-wrap">
-      <a href="../index.html#directory" class="back-link-top">← 認証一覧へ戻る</a>
 
-      <section class="hero-section">
-        <div class="hero-grid">
-          <div class="hero-visual">
-            <img src="../images/tart-main.jpg" alt="旬の果物のタルト" />
-          </div>
+<main class="product-detail-page">
+<div class="product-detail-wrap">
 
-          <div class="hero-copy">
-            <span class="eyebrow">2026 FIRST HALF / CAKE CATEGORY</span>
-            <h1 class="product-title">旬の果物のタルト</h1>
-            <p class="product-lead">
-              季節ごとの果実の魅力を一皿に閉じ込めた、華やかで上品なタルト。
-              見た瞬間に心をつかみ、食べるほどに完成度の高さが伝わる一品です。
-            </p>
+<a href="../index.html#directory" class="back-link-top">← 認証一覧へ戻る</a>
 
-            <div class="meta-table">
-              <div class="meta-row">
-                <div class="meta-label">価格</div>
-                <div class="meta-value">350円（1個）</div>
-              </div>
-              <div class="meta-row">
-                <div class="meta-label">販売元</div>
-                <div class="meta-value">ポッシュ・ドゥ・レーヴ芦屋店</div>
-              </div>
-              <div class="meta-row">
-                <div class="meta-label">部門</div>
-                <div class="meta-value">2026年上半期 / ケーキ部門</div>
-              </div>
-            </div>
+<section class="hero-section">
+<div class="hero-grid">
 
-            <div class="cta-row">
-              <a href="#" class="cta-btn primary">購入・店舗情報を見る</a>
-              <a href="../index.html#directory" class="cta-btn secondary">一覧へ戻る</a>
-            </div>
-          </div>
-        </div>
-      </section>
+<div class="hero-visual">
+<img src="../images/tart-main.jpg" alt="旬の果物のタルト">
+</div>
 
-      <section class="detail-grid">
-        <div class="content-card">
-          <h2 class="section-title-local">この商品の魅力</h2>
-          <p class="lead-copy">
-            色とりどりの果物が美しく重なり合い、店頭でもひときわ目を引く存在感を放つタルトです。
-            華やかな見た目だけでなく、果実の瑞々しさ、軽やかなクリーム、香ばしいタルト生地の一体感まで丁寧に設計されています。
-          </p>
-          <p class="normal-copy">
-            「贈りたくなる」「手土産に選びたくなる」「自分へのご褒美にしたくなる」。
-            そんな感情を自然に生み出す完成度の高さが、この商品の大きな魅力です。
-            季節感の表現と、価格以上の満足感が両立している点も高く評価されました。
-          </p>
-        </div>
+<div>
+<span class="eyebrow">2026 FIRST HALF / CAKE CATEGORY</span>
+<h1 class="product-title">シュークリーム</h1>
 
-        <div class="content-card">
-          <h2 class="section-title-local">iimono award 認証理由</h2>
-          <div class="reason-list">
-            <div class="reason-item">
-              <strong>1. 見た目の完成度</strong>
-              果実の配置や色のバランスに優れ、第一印象の華やかさが際立っています。
-            </div>
-            <div class="reason-item">
-              <strong>2. 季節感の表現力</strong>
-              旬の果物の魅力をしっかり感じられ、商品そのものに季節の価値が宿っています。
-            </div>
-            <div class="reason-item">
-              <strong>3. 贈答性の高さ</strong>
-              手土産・差し入れ・お祝いなど、複数の利用シーンで選ばれやすい商品設計です。
-            </div>
-            <div class="reason-item">
-              <strong>4. 価格との価値バランス</strong>
-              790円という価格に対して、見た目・満足感・特別感のバランスが非常に高い一品です。
-            </div>
-          </div>
-        </div>
+<p class="product-lead">
+季節ごとの果実の魅力を一皿に閉じ込めた、華やかで上品なタルト。  
+見た瞬間に心をつかみ、食べるほどに完成度の高さが伝わる一品です。
+</p>
 
-        <div class="content-card full">
-          <h2 class="section-title-local">商品ギャラリー</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <div class="gallery-placeholder">shu_sub2.jpg</div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-placeholder">shu_sub3.jpg</div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-placeholder">shu_sub4.jpg</div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-placeholder">shu_sub5.jpg</div>
-            </div>
-          </div>
-        </div>
+<div class="meta-table">
+<div class="meta-row">
+<div class="meta-label">価格</div>
+<div>350円（1個）</div>
+</div>
 
-        <div class="content-card full">
-          <h2 class="section-title-local">このお菓子を作った人</h2>
-          <div class="maker-block">
-            <div class="maker-photo-wrap">
-              <div class="maker-photo-placeholder">ito_pastrychef.jpg</div>
-            </div>
+<div class="meta-row">
+<div class="meta-label">販売元</div>
+<div>ポッシュ・ドゥ・レーヴ芦屋店</div>
+</div>
 
-            <div>
-              <div class="maker-name">ポッシュ・ドゥ・レーヴ芦屋店</div>
-              <p class="normal-copy">
-                果物の個性を活かした洋菓子づくりを得意とし、見た目の華やかさと食べた時の満足感の両立を大切にしている作り手です。
-                季節ごとの素材選びにこだわり、その時期に一番魅力のある味わいをどう表現するかを重視しています。
-              </p>
+<div class="meta-row">
+<div class="meta-label">部門</div>
+<div>2026年上半期 / ケーキ部門</div>
+</div>
+</div>
 
-              <div class="maker-career">
-                <strong>略歴</strong>
-                <p class="normal-copy">
-                  ここに100文字程度の略歴を入れられます。洋菓子に携わってきた背景や、現在のお店で大切にしていること、得意とする表現などを簡潔にまとめる想定です。
-                </p>
-              </div>
+<div class="cta-row">
+<a href="#" class="cta-btn primary">購入・店舗情報を見る</a>
+<a href="../index.html#directory" class="cta-btn secondary">一覧へ戻る</a>
+</div>
 
-              <div class="maker-points">
-                <div>・旬の素材を活かした設計を得意とする</div>
-                <div>・贈答性の高い洋菓子づくりを重視</div>
-                <div>・見た目と味わいの両立を大切にしている</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+</div>
+</div>
+</section>
 
-      <div class="note-box">
-        価格・内容は掲載時点の情報です。最新の販売状況や在庫、取り扱い内容は販売元へご確認ください。
-      </div>
-    </div>
-  </main>
+<section class="detail-grid">
+
+<div class="content-card">
+<h2 class="section-title-local">この商品の魅力</h2>
+<p class="lead-copy">
+色とりどりの果物が美しく重なり合い、店頭でもひときわ目を引く存在感を放つタルトです。  
+華やかな見た目だけでなく、果実の瑞々しさ、軽やかなクリーム、香ばしいタルト生地の一体感まで丁寧に設計されています。
+</p>
+<p class="normal-copy">
+贈り物・手土産・自分へのご褒美など、さまざまなシーンで選ばれる完成度の高さが評価されました。
+</p>
+</div>
+
+<div class="content-card">
+<h2 class="section-title-local">iimono award 認証理由</h2>
+
+<div class="reason-list">
+
+<div class="reason-item">
+<strong>1. 第一印象の華やかさ</strong>
+彩りと果実配置の完成度が高く、目を引く存在感があります。
+</div>
+
+<div class="reason-item">
+<strong>2. 季節感の表現</strong>
+旬の果実を通じて、その時期ならではの価値を届けています。
+</div>
+
+<div class="reason-item">
+<strong>3. 贈答性</strong>
+ギフト・差し入れ・手土産需要との相性が高い商品です。
+</div>
+
+<div class="reason-item">
+<strong>4. 価格以上の満足感</strong>
+790円という価格以上の特別感と満足度があります。
+</div>
+
+</div>
+</div>
+
+<div class="content-card full">
+<h2 class="section-title-local">商品ギャラリー</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img src="../images/shu_sub2.jpg" alt="旬の果物のタルト サブ画像1">
+</div>
+
+<div class="gallery-item">
+<img src="../images/shu_sub3.jpg" alt="旬の果物のタルト サブ画像2">
+</div>
+
+<div class="gallery-item">
+<img src="../images/shu_sub4.jpg" alt="旬の果物のタルト サブ画像3">
+</div>
+
+<div class="gallery-item">
+<img src="../images/shu_sub5.jpg" alt="旬の果物のタルト サブ画像4">
+</div>
+
+</div>
+</div>
+
+<div class="content-card full">
+<h2 class="section-title-local">このお菓子を作った人</h2>
+
+<div class="maker-block">
+
+<div class="maker-photo-wrap">
+<img src="../images/ito_pastrychef.jpg" alt="パティシエ">
+</div>
+
+<div>
+<div class="maker-name">ポッシュ・ドゥ・レーヴ芦屋店</div>
+
+<p class="normal-copy">
+果物の個性を最大限に活かした洋菓子づくりを得意とし、  
+見た目の華やかさと、食べた時の幸福感の両立を追求する作り手です。
+</p>
+
+<div class="maker-career">
+<strong>略歴</strong>
+<p class="normal-copy">
+関西の有名パティスリーで研鑽を積み、季節素材を活かした菓子づくりを追求。  
+現在は芦屋の人気店として多くのファンに支持されています。
+</p>
+</div>
+
+<div class="maker-points">
+<div>・旬の素材を活かした商品設計</div>
+<div>・贈答性の高い洋菓子づくり</div>
+<div>・見た目と味の両立を追求</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</section>
+
+<div class="note-box">
+価格・内容は掲載時点の情報です。最新の販売状況や在庫状況は販売元へご確認ください。
+</div>
+
+</div>
+</main>
+
 </body>
 </html>
