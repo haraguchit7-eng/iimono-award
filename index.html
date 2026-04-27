@@ -19,6 +19,36 @@
 
   <!-- Award Index Table CSS -->
   <style>
+    .maker-mini{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:18px 0 24px;
+}
+
+.maker-mini img{
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center top;
+  border:1px solid #ddd5c8;
+}
+
+.maker-mini strong{
+  display:block;
+  font-size:.95rem;
+  color:#1a2e44;
+  letter-spacing:.04em;
+}
+
+.maker-mini span{
+  display:block;
+  font-size:.78rem;
+  color:#9b7e57;
+  letter-spacing:.08em;
+}
     .department-award-card{
   background:#fff;
   border:1px solid #ddd5c8;
@@ -671,33 +701,32 @@
 
 </article>
 
-  <article class="department-award-card">
+  <article class="award-card">
 
-  <a href="awards/shucream.html" class="department-award-link">
+  <a href="awards/shucream.html" class="award-card-link">
 
-    <div class="department-award-visual">
-      <div class="department-product-photo">
-        <img src="/iimono-award/images/shu-main.jpg" alt="シャポーシュー">
-      </div>
-
-      <div class="department-maker-photo">
-        <img src="/iimono-award/images/ito_pastrychef.jpg" alt="伊東福子">
-      </div>
+    <div class="award-image-placeholder">
+      <img src="/iimono-award/images/shu-main.jpg" alt="シャポーシュー">
     </div>
 
-    <div class="department-award-body">
-      <div class="department-award-label">2026 上半期 認証商品</div>
+    <div class="award-body">
+      <div class="award-badge">2026 上半期 認証商品</div>
 
-      <h3 class="department-award-title">シャポーシュー</h3>
+      <h3 class="award-name">シャポーシュー</h3>
 
-      <p class="department-award-price">350円（税込）</p>
+      <p class="award-price">350円（税込）</p>
 
-      <div class="department-award-meta">
-        <p>ポッシュ・ドゥ・レーヴ芦屋店</p>
-        <p>伊東 福子 / オーナーパティシエ</p>
+      <p class="award-shop">ポッシュ・ドゥ・レーヴ芦屋店</p>
+
+      <div class="maker-mini">
+        <img src="/iimono-award/images/shu-maker.jpg" alt="伊東福子">
+        <div>
+          <strong>伊東 福子</strong>
+          <span>オーナーパティシエ</span>
+        </div>
       </div>
 
-      <span class="department-award-button">詳細を見る</span>
+      <span class="award-link-text">詳細を見る</span>
     </div>
 
   </a>
