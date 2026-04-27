@@ -19,6 +19,128 @@
 
   <!-- Award Index Table CSS -->
   <style>
+    .department-award-card{
+  background:#fff;
+  border:1px solid #ddd5c8;
+  box-shadow:0 10px 28px rgba(26,46,68,.06);
+  overflow:hidden;
+}
+
+.department-award-link{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+
+.department-award-visual{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:0;
+  border-bottom:1px solid #ddd5c8;
+  background:#f7f5f1;
+}
+
+.department-product-photo,
+.department-maker-photo{
+  height:360px;
+  overflow:hidden;
+}
+
+.department-product-photo img,
+.department-maker-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.department-maker-photo{
+  border-left:1px solid #ddd5c8;
+}
+
+.department-maker-photo img{
+  object-position:center top;
+}
+
+.department-award-body{
+  padding:30px 28px 34px;
+  text-align:center;
+}
+
+.department-award-label{
+  color:#9b7e57;
+  font-size:.9rem;
+  letter-spacing:.12em;
+  margin-bottom:14px;
+}
+
+.department-award-title{
+  font-family:"Noto Serif JP","Yu Mincho",serif;
+  font-size:2.1rem;
+  line-height:1.4;
+  color:#1a2e44;
+  margin:0 0 12px;
+}
+
+.department-award-price{
+  font-size:1.05rem;
+  margin:0 0 14px;
+  color:#333;
+}
+
+.department-award-meta{
+  color:#666;
+  font-size:.92rem;
+  line-height:1.8;
+  margin-bottom:24px;
+}
+
+.department-award-meta p{
+  margin:0;
+}
+
+.department-award-button{
+  display:inline-block;
+  padding:12px 28px;
+  border:1px solid #1a2e44;
+  color:#1a2e44;
+  font-size:.95rem;
+  transition:.25s;
+}
+
+.department-award-card:hover .department-award-button{
+  background:#1a2e44;
+  color:#fff;
+}
+
+.department-award-card:hover img{
+  transform:scale(1.03);
+}
+
+.department-product-photo img,
+.department-maker-photo img{
+  transition:.4s;
+}
+
+@media(max-width:768px){
+  .department-award-visual{
+    grid-template-columns:1fr;
+  }
+
+  .department-maker-photo{
+    border-left:none;
+    border-top:1px solid #ddd5c8;
+    height:260px;
+  }
+
+  .department-product-photo{
+    height:320px;
+  }
+
+  .department-award-title{
+    font-size:1.7rem;
+  }
+}
     .soon-card .award-image-placeholder{
   position:relative;
 }
