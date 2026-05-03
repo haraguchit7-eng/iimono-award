@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>認証一覧 | iimono award</title>
+
+<style>
+body{
+  font-family:"Noto Sans JP",sans-serif;
+  background:#f7f5f1;
+  color:#2c2c2c;
+  margin:0;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:60px 20px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:40px;
+  color:#1a2e44;
+}
+
+.filters{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:40px;
+}
+
+.filters select,
+.filters input{
+  padding:10px 14px;
+  border:1px solid #ddd;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #ddd;
+  padding:20px;
+  text-align:center;
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.name{
+  font-size:1.3rem;
+  margin:12px 0;
+}
+
+.meta{
+  color:#777;
+  font-size:.9rem;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>認証一覧</h1>
+
+<!-- 検索 -->
+<div class="filters">
+
+<input type="text" id="keyword" placeholder="キーワード検索">
+
+<select id="category">
+  <option value="">カテゴリー</option>
+  <option value="洋菓子">洋菓子</option>
+  <option value="焼き菓子">焼き菓子</option>
+</select>
+
+<select id="area">
+  <option value="">地域</option>
+  <option value="兵庫">兵庫</option>
+  <option value="東京">東京</option>
+</select>
+
+</div>
+
+<!-- 商品一覧 -->
+<div class="grid" id="list">
+
+<div class="card" data-category="焼き菓子" data-area="兵庫">
+  <img src="../images/ring.jpg">
+  <div class="name">和三盆リングサブレ</div>
+  <div class="meta">兵庫 / 焼き菓子</div>
+</div>
+
+<div class="card" data-category="洋菓子" data-area="兵庫">
+  <img src="../images/shu-main.jpg">
+  <div class="name">シャポーシュー</div>
+  <div class="meta">兵庫 / 洋菓子</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const keyword = document.getElementById("keyword");
+const category = document.getElementById("category");
+const area = document.getElementById("area");
+const cards = document.querySelectorAll(".card");
+
+function filter(){
+  const k = keyword.value.toLowerCase();
+  const c = category.value;
+  const a = area.value;
+
+  cards.forEach(card=>{
+    const name = card.innerText.toLowerCase();
+    const cat = card.dataset.category;
+    const ar = card.dataset.area;
+
+    let show = true;
+
+    if(k && !name.includes(k)) show=false;
+    if(c && c !== cat) show=false;
+    if(a && a !== ar) show=false;
+
+    card.style.display = show ? "block" : "none";
+  });
+}
+
+keyword.addEventListener("input", filter);
+category.addEventListener("change", filter);
+area.addEventListener("change", filter);
+
+</script>
+
+</body>
+</html>
