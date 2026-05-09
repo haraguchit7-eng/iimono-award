@@ -45,26 +45,56 @@ h1{
 }
 
 .card{
+  display:block;
   background:#fff;
-  border:1px solid #ddd;
-  padding:20px;
-  text-align:center;
+  border:1px solid #ddd5c8;
+  text-decoration:none;
+  color:inherit;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(26,46,68,.08);
 }
 
 .card img{
   width:100%;
-  height:200px;
+  height:320px;
   object-fit:cover;
+  display:block;
+}
+
+.card-body{
+  padding:34px 24px 30px;
+  text-align:center;
+}
+
+.badge{
+  display:inline-block;
+  font-size:.9rem;
+  letter-spacing:.08em;
+  color:#9b7e57;
+  margin-bottom:18px;
 }
 
 .name{
-  font-size:1.3rem;
-  margin:12px 0;
+  font-family:"Noto Serif JP",serif;
+  font-size:2rem;
+  line-height:1.4;
+  color:#1a2e44;
+  margin-bottom:18px;
+}
+
+.price{
+  font-size:1.1rem;
+  margin-bottom:14px;
 }
 
 .meta{
   color:#777;
-  font-size:.9rem;
+  font-size:1rem;
 }
 </style>
 
@@ -187,15 +217,55 @@ h1{
 <div class="grid" id="list">
 
 <a href="ring.html" class="card" data-category="焼き菓子" data-area="兵庫">
+
   <img src="../images/ring-main.png" alt="和三盆リングサブレ">
-  <div class="name">和三盆リングサブレ</div>
-  <div class="meta">兵庫 / 焼き菓子</div>
+
+  <div class="card-body">
+
+    <div class="badge">
+      2026 上半期 認証商品
+    </div>
+
+    <div class="name">
+      和三盆リングサブレ
+    </div>
+
+    <div class="price">
+      210円（税込）
+    </div>
+
+    <div class="meta">
+      兵庫 / 焼き菓子
+    </div>
+
+  </div>
+
 </a>
 
 <a href="shucream.html" class="card" data-category="ケーキ" data-area="兵庫">
+
   <img src="../images/shu-main.jpg" alt="シャポーシュー">
-  <div class="name">シャポーシュー</div>
-  <div class="meta">兵庫 / ケーキ</div>
+
+  <div class="card-body">
+
+    <div class="badge">
+      2026 上半期 認証商品
+    </div>
+
+    <div class="name">
+      シャポーシュー
+    </div>
+
+    <div class="price">
+      350円（税込）
+    </div>
+
+    <div class="meta">
+      兵庫 / ケーキ
+    </div>
+
+  </div>
+
 </a>
 
 </div>
