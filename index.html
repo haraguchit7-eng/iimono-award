@@ -716,6 +716,25 @@ h3,
   height:auto;
   transform:translateY(6px);
 }
+  /* ロゴ調整：強制上書き */
+a.site-logo img,
+.site-logo img,
+.logo img,
+.header-logo img{
+  width:270px !important;
+  height:auto !important;
+  transform:translateY(8px) !important;
+  display:block !important;
+}
+
+a.site-logo,
+.site-logo,
+.logo,
+.header-logo{
+  display:flex !important;
+  align-items:center !important;
+  flex-shrink:0 !important;
+}
   </style>
 </head>
 <body>
