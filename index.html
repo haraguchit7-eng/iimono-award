@@ -627,11 +627,10 @@ h3,
     html{
   scroll-behavior:smooth;
 }
-    /* =========================
+/* =========================
    FINAL HEADER / LAYOUT FIX
 ========================= */
 
-/* ヘッダーを安定させる */
 #site-header{
   width:100%;
   background:#fff;
@@ -648,7 +647,7 @@ h3,
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  gap:48px;
+  gap:44px;
 }
 
 /* ロゴ */
@@ -664,21 +663,18 @@ h3,
   width:220px;
   height:auto;
   transform:translateY(2px);
-
-  margin-right:-52px;
 }
+
 /* ナビ */
 #site-header .global-nav{
-  flex:1;
   display:flex;
-  justify-content:flex-end;
   align-items:center;
+  flex:0 0 auto;
 }
 
 #site-header .global-nav ul{
   display:flex;
   align-items:center;
-  justify-content:flex-end;
   gap:34px;
   margin:0;
   padding:0;
@@ -714,7 +710,7 @@ h3,
   padding-right:72px;
 }
 
-/* 認証一覧カードの横幅を広げる */
+/* 認証一覧カード */
 .award-grid,
 .directory-grid,
 .product-grid{
@@ -753,9 +749,6 @@ h3,
     grid-template-columns:1fr;
     gap:28px;
   }
-}
-    #site-header .site-logo img{
-  margin-right:-28px;
 }
   </style>
 </head>
