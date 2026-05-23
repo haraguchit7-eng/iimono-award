@@ -660,15 +660,6 @@ h3,
   width:280px;   /* ロゴサイズ */
   height:auto;
 }
-
-/* ヘッダー全体を上下中央 */
-.header-inner,
-.header-container,
-.header-wrap{
-  display:flex;
-  align-items:center;
-}
-
 /* スマホ */
 @media(max-width:768px){
 
@@ -676,6 +667,34 @@ h3,
     width:210px;
   }
 
+}
+    .site-logo{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  flex-shrink:0;
+}
+
+.site-logo img{
+  display:block;
+  width:240px;
+  height:auto;
+}
+
+.header-nav,
+.header-nav ul,
+.nav-menu,
+.nav-list{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  white-space:nowrap;
+}
+
+.header-nav a,
+.nav-menu a,
+.nav-list a{
+  white-space:nowrap;
 }
   </style>
 </head>
