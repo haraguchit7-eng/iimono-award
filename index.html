@@ -393,6 +393,38 @@ h3,
   font-family:"Noto Serif JP",serif !important;
   letter-spacing:.04em;
 }
+    .nav-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 24px;
+  background:linear-gradient(135deg,#142b42,#1d3d5d);
+  color:#fff !important;
+  border-radius:10px;
+  font-weight:500;
+  letter-spacing:.08em;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(26,46,68,.18);
+  transition:.25s ease;
+}
+
+.nav-cta::before{
+  content:"✉";
+  font-size:1rem;
+}
+
+.nav-cta::after{
+  content:"›";
+  font-size:1.3rem;
+  line-height:1;
+}
+
+.nav-cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 26px rgba(26,46,68,.24);
+  opacity:.95;
+}
   </style>
 </head>
 <body>
