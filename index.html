@@ -672,25 +672,29 @@ h3,
   #site-header .site-logo img{
     width:180px;
     transform:none;
-  }
 }
-    /* =========================
-   HEADER WIDTH FIX
+  /* =========================
+   SITE CONTENT WIDTH FIX
 ========================= */
 
-#site-header .header-inner{
-  max-width:1400px;
-  margin:0 auto;
-  padding:0 32px;
+.container{
+  max-width:1320px !important;
+  width:100% !important;
+  padding-left:32px !important;
+  padding-right:32px !important;
 }
 
-/* PCで左右余白を減らす */
 @media(min-width:1200px){
-
-  #site-header .header-inner{
-    padding:0 18px;
+  .container{
+    max-width:1440px !important;
   }
+}
 
+@media(max-width:768px){
+  .container{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
 }
   </style>
 </head>
