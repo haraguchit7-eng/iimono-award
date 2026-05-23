@@ -644,6 +644,39 @@ h3,
     width:170px;
   }
 }
+    /* =========================
+   HEADER LOGO
+========================= */
+
+.site-logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+}
+
+.site-logo img{
+  display:block;
+  width:280px;   /* ロゴサイズ */
+  height:auto;
+}
+
+/* ヘッダー全体を上下中央 */
+.header-inner,
+.header-container,
+.header-wrap{
+  display:flex;
+  align-items:center;
+}
+
+/* スマホ */
+@media(max-width:768px){
+
+  .site-logo img{
+    width:210px;
+  }
+
+}
   </style>
 </head>
 <body>
