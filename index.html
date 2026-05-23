@@ -735,6 +735,55 @@ a.site-logo,
   align-items:center !important;
   flex-shrink:0 !important;
 }
+  /* ヘッダー全体調整 */
+.header-inner,
+.header-container,
+.header-wrap,
+.site-header .container{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:32px !important;
+  min-height:88px !important;
+}
+
+/* ロゴ調整 */
+.site-logo{
+  display:flex !important;
+  align-items:center !important;
+  flex-shrink:0 !important;
+}
+
+.site-logo img{
+  width:250px !important;
+  height:auto !important;
+  display:block !important;
+  transform:translateY(4px) !important;
+}
+
+/* ナビを折り返さない */
+.header-nav,
+.header-nav ul,
+.nav-menu,
+.nav-list{
+  display:flex !important;
+  align-items:center !important;
+  gap:30px !important;
+  flex-wrap:nowrap !important;
+  white-space:nowrap !important;
+}
+
+.header-nav a,
+.nav-menu a,
+.nav-list a{
+  white-space:nowrap !important;
+}
+
+/* お問い合わせボタン */
+.nav-cta{
+  white-space:nowrap !important;
+  flex-shrink:0 !important;
+}
   </style>
 </head>
 <body>
