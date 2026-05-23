@@ -627,27 +627,31 @@ h3,
     html{
   scroll-behavior:smooth;
 }
-    .site-logo{
-  display:flex;
-  align-items:center;
-  text-decoration:none;
-}
-
-.site-logo img{
-  display:block;
-  width:220px;
-  height:auto;
-}
-
-@media(max-width:768px){
-  .site-logo img{
-    width:170px;
-  }
-}
-/* =========================
-   HEADER LOGO RESET
+    /* =========================
+   FINAL HEADER / LAYOUT FIX
 ========================= */
 
+/* ヘッダーを安定させる */
+#site-header{
+  width:100%;
+  background:#fff;
+  z-index:999;
+}
+
+#site-header .header-inner{
+  width:100%;
+  max-width:1680px;
+  margin:0 auto;
+  padding:0 56px;
+  min-height:88px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:36px;
+}
+
+/* ロゴ */
 #site-header .site-logo{
   display:flex;
   align-items:center;
@@ -657,43 +661,96 @@ h3,
 
 #site-header .site-logo img{
   display:block;
-  width:230px;
+  width:220px;
   height:auto;
-  transform:translateY(3px);
+  transform:translateY(2px);
 }
 
-/* ナビ文字を2行にしない */
+/* ナビ */
+#site-header .global-nav{
+  flex:1;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+#site-header .global-nav ul{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:34px;
+  margin:0;
+  padding:0;
+  list-style:none;
+  flex-wrap:nowrap;
+}
+
+#site-header .global-nav li,
 #site-header .global-nav a{
   white-space:nowrap;
 }
 
-/* スマホ */
-@media(max-width:768px){
-  #site-header .site-logo img{
-    width:180px;
-    transform:none;
+/* お問い合わせ */
+#site-header .nav-cta{
+  white-space:nowrap;
+  flex-shrink:0;
 }
-  /* =========================
-   SITE CONTENT WIDTH FIX
-========================= */
 
+/* 変な左上の線を消す */
+#directory::before,
+.section-header::before{
+  display:none !important;
+  content:none !important;
+}
+
+/* サイト全体の左右余白調整 */
 .container{
-  max-width:1320px !important;
-  width:100% !important;
-  padding-left:32px !important;
-  padding-right:32px !important;
+  width:100%;
+  max-width:1520px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:48px;
+  padding-right:48px;
 }
 
-@media(min-width:1200px){
-  .container{
-    max-width:1440px !important;
+/* 認証一覧カードの横幅を広げる */
+.award-grid,
+.directory-grid,
+.product-grid{
+  width:100%;
+  max-width:1480px;
+  margin-left:auto;
+  margin-right:auto;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:36px;
+}
+
+/* スマホ */
+@media(max-width:900px){
+  #site-header .header-inner{
+    padding:0 20px;
+    min-height:76px;
   }
-}
 
-@media(max-width:768px){
+  #site-header .site-logo img{
+    width:170px;
+  }
+
+  #site-header .global-nav{
+    display:none;
+  }
+
   .container{
-    padding-left:20px !important;
-    padding-right:20px !important;
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .award-grid,
+  .directory-grid,
+  .product-grid{
+    grid-template-columns:1fr;
+    gap:28px;
   }
 }
   </style>
