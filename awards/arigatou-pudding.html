@@ -2,106 +2,185 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>ありがとうプリン｜iimono award</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ありがとうプリン | iimono award</title>
+<link rel="stylesheet" href="../style.css">
+
 <style>
-body{margin:0;font-family:"Noto Sans JP",serif;background:#f8f5ee;color:#10203a;line-height:1.8}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-.container{width:min(1080px,92%);margin:auto}
-.header{padding:28px 0;border-bottom:1px solid #ddd;background:#fff}
-.logo{font-size:28px;font-weight:700;letter-spacing:.08em}
-.hero{padding:70px 0}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.hero-img{background:#fff;border:1px solid #ddd;padding:18px}
-.badge{display:inline-block;color:#9a7a45;letter-spacing:.18em;font-size:14px;margin-bottom:18px}
-h1{font-size:48px;line-height:1.35;margin:0 0 16px}
-.price{font-size:28px;color:#9a7a45;font-weight:700}
-.shop{font-size:18px;margin-bottom:28px}
-.lead{font-size:18px;color:#333}
-.info{background:#fff;padding:50px 0;border-top:1px solid #e5dfd2;border-bottom:1px solid #e5dfd2}
-.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.info-card{background:#faf8f2;border:1px solid #e5dfd2;padding:24px}
-.info-card span{display:block;color:#9a7a45;font-size:13px;letter-spacing:.12em}
-.info-card strong{font-size:20px}
-.section{padding:70px 0}
-.section h2{font-size:32px;margin-bottom:24px}
-.btn{display:inline-block;background:#10203a;color:#fff;padding:16px 36px;border-radius:999px;margin-top:20px}
-.footer{text-align:center;padding:40px;color:#777}
+body{background:#f7f5f1;color:#2c2c2c;}
+.maker-person-role{
+  color:#9b7e57;
+  font-weight:600;
+  margin-bottom:28px;
+}
+.product-detail-page{padding-top:100px;padding-bottom:80px;}
+.product-detail-wrap{max-width:1280px;margin:0 auto;padding:0 24px;}
+.back-link-top{display:inline-block;margin-bottom:28px;color:#1a2e44;text-decoration:none;font-size:.95rem;}
+.hero-section{background:#fbfaf7;border:1px solid #ddd5c8;padding:36px;margin-bottom:34px;}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;}
+.hero-visual{border:1px solid #ddd5c8;background:#ece7de;overflow:hidden;}
+.hero-visual img{width:100%;height:560px;object-fit:cover;display:block;}
+.eyebrow{display:inline-block;margin-bottom:22px;font-size:.82rem;letter-spacing:.18em;color:#9b7e57;}
+.product-title{font-family:"Noto Serif JP",serif;font-size:clamp(2.4rem,4vw,4.3rem);line-height:1.3;color:#20354d;margin:0 0 24px;}
+.product-lead{font-size:1.04rem;line-height:2;color:#666;margin-bottom:28px;}
+.meta-table{border-top:1px solid #ddd5c8;margin-bottom:28px;}
+.meta-row{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid #ddd5c8;}
+.meta-label{font-weight:700;color:#8b7355;}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;}
+.cta-btn{display:inline-flex;align-items:center;justify-content:center;min-width:220px;padding:17px 28px;border:1px solid #1a2e44;text-decoration:none;transition:.3s;}
+.cta-btn.primary{background:#1a2e44;color:#fff;}
+.cta-btn.secondary{color:#1a2e44;}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+.content-card{background:#fff;border:1px solid #e3dbce;padding:30px;box-shadow:0 2px 10px rgba(26,46,68,.04);}
+.content-card.full{grid-column:1 / -1;}
+.section-title-local{font-family:"Noto Serif JP",serif;font-size:1.45rem;color:#1a2e44;margin-bottom:18px;}
+.lead-copy,.normal-copy{line-height:2;color:#555;}
+.reason-list{display:grid;gap:14px;}
+.reason-item{background:#fcfaf6;border-left:3px solid #c8a96e;padding:14px 16px;}
+.reason-item strong{display:block;margin-bottom:6px;color:#1a2e44;}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.gallery-item{overflow:hidden;border:1px solid #ddd5c8;background:#ece7de;}
+.gallery-item img{width:100%;height:220px;object-fit:cover;display:block;}
+.maker-block{display:grid;grid-template-columns:240px 1fr;gap:28px;}
+.maker-photo-wrap{overflow:hidden;border:1px solid #ddd5c8;background:#ece7de;}
+.maker-photo-wrap img{width:100%;height:300px;object-fit:cover;display:block;}
+.maker-name{font-size:1.1rem;font-weight:700;color:#1a2e44;margin-bottom:12px;}
+.note-box{margin-top:28px;background:#fff;border:1px solid #e3dbce;padding:24px;color:#666;font-size:.92rem;}
+
+@media(max-width:1100px){
+.hero-grid,.detail-grid{grid-template-columns:1fr;}
+.gallery-grid{grid-template-columns:repeat(2,1fr);}
+}
 @media(max-width:768px){
-.hero-grid,.info-grid{grid-template-columns:1fr}
-h1{font-size:36px}
+.product-detail-page{padding-top:88px;}
+.hero-section,.content-card{padding:22px;}
+.hero-visual img{height:340px;}
+.gallery-grid{grid-template-columns:1fr;}
+.maker-block{grid-template-columns:1fr;}
+.cta-btn{width:100%;}
+.meta-row{grid-template-columns:1fr;gap:6px;}
 }
 </style>
 </head>
+
 <body>
+<main class="product-detail-page">
+<div class="product-detail-wrap">
 
-<header class="header">
-  <div class="container">
-    <a href="index.html" class="logo">iimono award</a>
-  </div>
-</header>
+<a href="../index.html#directory" class="back-link-top">← 認証一覧へ戻る</a>
 
-<main>
+<section class="hero-section">
+<div class="hero-grid">
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-img">
-      <img src="images/arigatou.png" alt="ありがとうプリン">
-    </div>
+<div class="hero-visual">
+<img src="/iimono-award/images/arigatou.jpg" alt="ありがとうプリン">
+</div>
 
-    <div>
-      <div class="badge">2026 上半期 認証商品</div>
-      <h1>ありがとうプリン</h1>
-      <p class="price">2,970円</p>
-      <p class="shop">杏堂（あんずどう）</p>
-      <p class="lead">
-        スイーツ専用の卵を使った、濃厚でいて優しい甘みを感じることのできる味。保存料・着色料を一切使わず、素材の味を活かしたこだわりのプリン。蓋に6か国で「ありがとう」の言葉が書かれている。
-      </p>
-      <a href="index.html" class="btn">一覧へ戻る</a>
-    </div>
-  </div>
+<div>
+<span class="eyebrow">2026 FIRST HALF / SWEETS CATEGORY</span>
+<h1 class="product-title">ありがとうプリン</h1>
+
+<p class="product-lead">
+大切な人へ「ありがとう」の気持ちを届けるためにつくられた、贈り物にふさわしい特別なプリン。
+やさしい甘さとなめらかな口どけで、食べる人にも贈る人にも温かい体験を届ける商品です。
+</p>
+
+<div class="meta-table">
+<div class="meta-row">
+<div class="meta-label">価格</div>
+<div>2,970円</div>
+</div>
+
+<div class="meta-row">
+<div class="meta-label">販売元</div>
+<div>杏堂（あんずどう）</div>
+</div>
+
+<div class="meta-row">
+<div class="meta-label">部門</div>
+<div>2026年上半期 / プリン・ギフトスイーツ部門</div>
+</div>
+</div>
+
+<div class="cta-row">
+<a href="#"
+target="_blank"
+rel="noopener noreferrer"
+class="cta-btn primary">
+購入・店舗情報を見る
+</a>
+<a href="../index.html#directory" class="cta-btn secondary">一覧へ戻る</a>
+</div>
+
+</div>
+</div>
 </section>
 
-<section class="info">
-  <div class="container info-grid">
-    <div class="info-card">
-      <span>AWARD</span>
-      <strong>2026 上半期 認証商品</strong>
-    </div>
-    <div class="info-card">
-      <span>PRICE</span>
-      <strong>2,970円</strong>
-    </div>
-    <div class="info-card">
-      <span>SHOP</span>
-      <strong>杏堂（あんずどう）</strong>
-    </div>
-  </div>
+<section class="detail-grid">
+
+<div class="content-card">
+<h2 class="section-title-local">この商品の魅力</h2>
+<p class="lead-copy">
+ありがとうプリンは、単なるスイーツではなく「感謝の気持ちを届けるギフト」として設計された商品です。
+商品名そのものに想いが込められており、誕生日・記念日・お礼・手土産など、さまざまな場面で使いやすい点が魅力です。
+</p>
+<p class="normal-copy">
+なめらかな口どけとやさしい甘さにより、幅広い年代に受け入れられやすく、贈り物としての満足度も高い商品です。
+「ありがとう」を言葉だけでなく、食体験として届けられる点に独自性があります。
+</p>
+</div>
+
+<div class="content-card">
+<h2 class="section-title-local">iimono award 認証理由</h2>
+<div class="reason-list">
+<div class="reason-item"><strong>1. コンセプトの明確性</strong>「ありがとう」を届けるギフトとして、商品名・体験価値が明確である</div>
+<div class="reason-item"><strong>2. 贈答品としての使いやすさ</strong>感謝・お礼・記念日など、幅広いシーンで選びやすい</div>
+<div class="reason-item"><strong>3. 味わいの親しみやすさ</strong>なめらかな口どけとやさしい甘さで、年齢を問わず楽しめる</div>
+<div class="reason-item"><strong>4. 想いが伝わる商品性</strong>食べる人・贈る人の双方に温かい体験を提供できる</div>
+</div>
+</div>
+
+<div class="content-card full">
+<h2 class="section-title-local">商品ギャラリー</h2>
+<div class="gallery-grid">
+<div class="gallery-item"><img src="/iimono-award/images/arigatou.jpg" alt="ありがとうプリン"></div>
+<div class="gallery-item"><img src="/iimono-award/images/arigatou.jpg" alt="ありがとうプリン"></div>
+<div class="gallery-item"><img src="/iimono-award/images/arigatou.jpg" alt="ありがとうプリン"></div>
+<div class="gallery-item"><img src="/iimono-award/images/arigatou.jpg" alt="ありがとうプリン"></div>
+</div>
+</div>
+
+<div class="content-card full">
+<h2 class="section-title-local">このお菓子を作った人</h2>
+<div class="maker-block">
+
+<div class="maker-photo-wrap">
+<img src="/iimono-award/images/arigatou.jpg" alt="杏堂">
+</div>
+
+<div>
+<div class="maker-name">杏堂（あんずどう）</div>
+
+<p class="maker-person-name"><strong>作り手紹介</strong></p>
+
+<p class="maker-person-role">プリン・ギフトスイーツ</p>
+<p class="normal-copy">
+大切な人に感謝を伝えるきっかけとなるよう、商品コンセプト・味わい・贈りやすさにこだわったスイーツづくりを行っています。
+日常の中にある「ありがとう」を、やさしい甘さとともに届けることを大切にしています。
+</p>
+</div>
+
+</div>
+</div>
+
 </section>
 
-<section class="section">
-  <div class="container">
-    <h2>商品の特徴</h2>
-    <p>
-      なめらかな口どけと、やさしい甘さが特徴。
-      贈答用としても使いやすく、感謝の気持ちを伝えるギフトとしておすすめです。
-    </p>
+<div class="note-box">
+価格・内容は掲載時点の情報です。最新情報は販売元へご確認ください。
+</div>
 
-    <h2>認証コメント</h2>
-    <p>
-      「ありがとう」という想いを商品コンセプトに落とし込み、
-      食べる人・贈る人の双方に温かい体験を届ける点を評価しました。
-    </p>
-  </div>
-</section>
-
+</div>
 </main>
-
-<footer class="footer">
-  © 2026 iimono award
-</footer>
-
 </body>
 </html>
