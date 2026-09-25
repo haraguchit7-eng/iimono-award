@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ブランデーケーキ | iimono award</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+body{
+  background:#f7f5f1;
+  color:#2c2c2c;
+}
+
+.product-detail-page{
+  padding-top:100px;
+  padding-bottom:80px;
+}
+
+.product-detail-wrap{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+.back-link-top{
+  display:inline-block;
+  margin-bottom:28px;
+  color:#1a2e44;
+  text-decoration:none;
+  font-size:.95rem;
+}
+
+/* HERO */
+.hero-section{
+  background:#fbfaf7;
+  border:1px solid #ddd5c8;
+  padding:36px;
+  margin-bottom:34px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:54px;
+  align-items:center;
+}
+
+.hero-visual{
+  border:1px solid #ddd5c8;
+  background:#ece7de;
+  overflow:hidden;
+}
+
+.hero-visual img{
+  width:100%;
+  height:560px;
+  object-fit:cover;
+  display:block;
+}
+
+.eyebrow{
+  display:inline-block;
+  margin-bottom:22px;
+  font-size:.82rem;
+  letter-spacing:.18em;
+  color:#9b7e57;
+}
+
+.product-title{
+  font-family:"Noto Serif JP",serif;
+  font-size:clamp(2.4rem,4vw,4.3rem);
+  line-height:1.3;
+  color:#20354d;
+  margin:0 0 24px;
+}
+
+.product-lead{
+  font-size:1.04rem;
+  line-height:2;
+  color:#666;
+  margin-bottom:28px;
+}
+
+.meta-table{
+  border-top:1px solid #ddd5c8;
+  margin-bottom:28px;
+}
+
+.meta-row{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:16px;
+  padding:16px 0;
+  border-bottom:1px solid #ddd5c8;
+}
+
+.meta-label{
+  font-weight:700;
+  color:#8b7355;
+}
+
+.cta-row{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.cta-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:220px;
+  padding:17px 28px;
+  border:1px solid #1a2e44;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.cta-btn.primary{
+  background:#1a2e44;
+  color:#fff;
+}
+
+.cta-btn.secondary{
+  color:#1a2e44;
+}
+
+/* CONTENT */
+.detail-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+
+.content-card{
+  background:#fff;
+  border:1px solid #e3dbce;
+  padding:30px;
+  box-shadow:0 2px 10px rgba(26,46,68,.04);
+}
+
+.content-card.full{
+  grid-column:1 / -1;
+}
+
+.section-title-local{
+  font-family:"Noto Serif JP",serif;
+  font-size:1.45rem;
+  color:#1a2e44;
+  margin-bottom:18px;
+}
+
+.lead-copy,
+.normal-copy{
+  line-height:2;
+  color:#555;
+}
+
+/* AWARD REASONS */
+.reason-list{
+  display:grid;
+  gap:14px;
+}
+
+.reason-item{
+  background:#fcfaf6;
+  border-left:3px solid #c8a96e;
+  padding:14px 16px;
+}
+
+.reason-item strong{
+  display:block;
+  margin-bottom:6px;
+  color:#1a2e44;
+}
+
+/* GALLERY */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.gallery-item{
+  overflow:hidden;
+  border:1px solid #ddd5c8;
+  background:#ece7de;
+}
+
+.gallery-item img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+/* MAKER */
+.maker-block{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+.maker-name{
+  font-family:"Noto Serif JP",serif;
+  font-size:1.3rem;
+  font-weight:700;
+  color:#1a2e44;
+  margin-bottom:14px;
+}
+
+.maker-person-role{
+  color:#9b7e57;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.note-box{
+  margin-top:28px;
+  background:#fff;
+  border:1px solid #e3dbce;
+  padding:24px;
+  color:#666;
+  font-size:.92rem;
+}
+
+/* MOBILE */
+@media(max-width:1100px){
+
+  .hero-grid,
+  .detail-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+
+  .product-detail-page{
+    padding-top:88px;
+  }
+
+  .hero-section,
+  .content-card{
+    padding:22px;
+  }
+
+  .hero-visual img{
+    height:340px;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cta-btn{
+    width:100%;
+  }
+
+  .meta-row{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="product-detail-page">
+
+<div class="product-detail-wrap">
+
+<a href="../index.html#directory" class="back-link-top">
+← 認証一覧へ戻る
+</a>
+
+
+<!-- =========================
+ HERO
+========================= -->
+
+<section class="hero-section">
+
+<div class="hero-grid">
+
+<div class="hero-visual">
+<img
+  src="/iimono-award/images/main-brandy.jpg"
+  alt="大和屋本店 ブランデーケーキ">
+</div>
+
+<div>
+
+<span class="eyebrow">
+2026 SECOND HALF / CASTELLA CATEGORY
+</span>
+
+<h1 class="product-title">
+ブランデーケーキ
+</h1>
+
+<p class="product-lead">
+口に入れた瞬間に、じゅわりと染み出すような
+ブランデーの芳醇な香りに包まれる逸品。
+職人の手で1本1本ブランデーシロップを塗り重ね、
+1か月間しっかりと寝かせることで、
+ブランデーを染みわたらせている。
+</p>
+
+<div class="meta-table">
+
+<div class="meta-row">
+<div class="meta-label">価格</div>
+<div>3,240円（税込）Lサイズ</div>
+</div>
+
+<div class="meta-row">
+<div class="meta-label">販売元</div>
+<div>大和屋本店</div>
+</div>
+
+<div class="meta-row">
+<div class="meta-label">部門</div>
+<div>2026年下半期 / カステラ部門</div>
+</div>
+
+</div>
+
+<div class="cta-row">
+
+<!-- 購入ページURLが決まったらhrefを変更 -->
+<a
+href="#"
+class="cta-btn primary">
+購入・店舗情報を見る
+</a>
+
+<a
+href="../index.html#directory"
+class="cta-btn secondary">
+一覧へ戻る
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+<!-- =========================
+ DETAIL
+========================= -->
+
+<section class="detail-grid">
+
+
+<!-- 魅力 -->
+
+<div class="content-card">
+
+<h2 class="section-title-local">
+この商品の魅力
+</h2>
+
+<p class="lead-copy">
+
+このブランデーケーキの最大の魅力は、
+染み出すようなブランデーの馥郁（ふくいく）とした香りとしっとり感。
+
+ともするとパサつきがちなパウンドケーキを、
+口に入れるとまるで溶けていくような、
+しっとりを越えた食感に仕上げている。
+
+<br><br>
+
+地域で150年以上続く菓子匠の持つ職人技と、
+手間をかけ機械に頼らない手作りの妙が作り出す逸品。
+
+一度食べると忘れられないような食感と香りに、
+リピートする人が続出するのもうなづける。
+
+<br><br>
+
+ブランデーにもVSOPを使い、
+香り高い仕上がりにもこだわりがある。
+
+何度も職人の手作業で塗り重ねられるブランデーは、
+染み込むまで1か月、
+専用の熟成室で寝かせてから出荷するという徹底ぶり。
+
+<br><br>
+
+発売から45年。
+
+変わらず地元で愛され続ける理由がここにある。
+
+</p>
+
+</div>
+
+
+
+<!-- 認証理由 -->
+
+<div class="content-card">
+
+<h2 class="section-title-local">
+iimono award 認証理由
+</h2>
+
+<div class="reason-list">
+
+<div class="reason-item">
+<strong>1. 商品の完成度</strong>
+創業150年の菓子匠が作る、職人技の集大成ともいえる逸品
+</div>
+
+<div class="reason-item">
+<strong>2. 食感・味のバランス</strong>
+染み出すようなしっとり感と、
+芳醇な香りと甘みがほどよく溶け合う
+</div>
+
+<div class="reason-item">
+<strong>3. 価格の妥当性・満足度</strong>
+真似のできない味わいがあり、
+食べ応えもあるため満足度も高い
+</div>
+
+<div class="reason-item">
+<strong>4. 地域性・希少性</strong>
+広島で150年以上続く菓子匠。
+東京ではまだ知る人ぞ知る存在だからこそ、
+ぜひ広く知らしめたい一品
+</div>
+
+</div>
+</div>
+
+
+
+<!-- =========================
+ GALLERY
+========================= -->
+
+<div class="content-card full">
+
+<h2 class="section-title-local">
+商品ギャラリー
+</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img
+src="/iimono-award/images/sub1.jpg"
+alt="焼き上げられたブランデーケーキ">
+</div>
+
+<div class="gallery-item">
+<img
+src="/iimono-award/images/sub2.jpg"
+alt="ブランデーシロップを塗る工程">
+</div>
+
+<div class="gallery-item">
+<img
+src="/iimono-award/images/sub3.jpg"
+alt="ブランデーケーキの包装">
+</div>
+
+<div class="gallery-item">
+<img
+src="/iimono-award/images/sub4.jpg"
+alt="大和屋本店 ブランデーケーキ">
+</div>
+
+</div>
+</div>
+
+
+
+<!-- =========================
+ MAKER
+========================= -->
+
+<div class="content-card full">
+
+<h2 class="section-title-local">
+このお菓子を作る菓子匠
+</h2>
+
+<div class="maker-block">
+
+<div>
+
+<div class="maker-name">
+大和屋本店
+</div>
+
+<p class="maker-person-role">
+150年以上受け継がれる菓子づくり
+</p>
+
+<p class="normal-copy">
+
+地域で150年以上にわたり菓子づくりを続けてきた大和屋本店。
+
+このブランデーケーキも、
+機械だけでは生み出すことのできない職人の手仕事によって
+一本一本丁寧に作られている。
+
+<br><br>
+
+焼き上げたケーキに、
+VSOPを使用したブランデーシロップを
+職人が何度も手作業で塗り重ねる。
+
+そして完成ではない。
+
+そこから専用の熟成室で約1か月間寝かせ、
+ブランデーを生地の中までじっくりと染み込ませていく。
+
+<br><br>
+
+発売から45年。
+
+時間と手間を惜しまない菓子づくりが、
+長く愛され続ける味を生み出している。
+
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<div class="note-box">
+価格・内容は掲載時点の情報です。
+最新情報は販売元へご確認ください。
+</div>
+
+
+</div>
+</main>
+
+</body>
+</html>
